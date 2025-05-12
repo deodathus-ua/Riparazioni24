@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const testimonials = [
   {
@@ -80,6 +82,20 @@ const TestimonialsSection = () => {
             </div>
             <span className="ml-2 text-lg font-semibold">4.9/5</span>
             <span className="ml-2 text-gray-500">(98 recensioni)</span>
+          </div>
+        </div>
+        
+        <div className="mt-10 text-center">
+          <div className="max-w-2xl mx-auto bg-[#1e3a8a]/5 rounded-lg p-6 border border-[#1e3a8a]/10">
+            <h3 className="text-2xl font-bold mb-4 text-[#1e3a8a]">Unisciti ai nostri clienti soddisfatti!</h3>
+            <p className="text-gray-700 mb-6">
+              Anche il tuo elettrodomestico merita una riparazione professionale e garantita. Contattaci ora per un intervento rapido e risolutivo.
+            </p>
+            <Link to="/contatti">
+              <Button size="lg" className="bg-[#1e3a8a] hover:bg-[#2563eb] text-white font-semibold py-3 px-8">
+                Richiedi il tuo intervento ora
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

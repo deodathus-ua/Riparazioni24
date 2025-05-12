@@ -94,3 +94,66 @@
     transform: translateY(0);
   }
 }
+
+/* Button hover effects */
+.btn-hover-effect {
+  @apply relative overflow-hidden transition-all duration-300;
+}
+
+.btn-hover-effect::after {
+  content: '';
+  @apply absolute inset-0 bg-white/20 scale-x-0 origin-left transition-transform duration-300;
+}
+
+.btn-hover-effect:hover::after {
+  @apply scale-x-100;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improved link transitions */
+a {
+  @apply transition-all duration-200;
+}
+
+a.underline-link {
+  @apply relative;
+}
+
+a.underline-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-full h-0.5 bg-current scale-x-0 origin-left transition-transform duration-300;
+}
+
+a.underline-link:hover::after {
+  @apply scale-x-100;
+}
+
+/* Card hover effects */
+.hover-card {
+  @apply transition-all duration-300;
+}
+
+.hover-card:hover {
+  @apply transform -translate-y-1 shadow-lg;
+}
+
+/* Pulse animation for CTA highlights */
+.pulse-highlight {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}

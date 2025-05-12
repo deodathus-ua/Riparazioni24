@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button'; // Aggiungiamo l'import del Button
+import { Button } from '@/components/ui/button';
 
 const services = [
   {
@@ -14,7 +14,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 3h8m-8 3h8m-4 5a2 2 0 100-4 2 2 0 000 4z" />
       </svg>
     ),
-    image: '/images/lavatrice.jpg'
+    image: '/images/lavatrice.jpg',
+    ctaText: 'Ripara la tua lavatrice oggi!'
   },
   {
     id: 'lavastoviglie',
@@ -25,7 +26,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm0 4h14M8 10v7m8-7v7" />
       </svg>
     ),
-    image: '/images/lavastoviglie.jpg'
+    image: '/images/lavastoviglie.jpg',
+    ctaText: 'Lavastoviglie che non lava? Chiama ora!'
   },
   {
     id: 'frigorifero',
@@ -36,7 +38,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm0 9h14M9 3v9m0 3v6" />
       </svg>
     ),
-    image: '/images/frigorifero.jpg'
+    image: '/images/frigorifero.jpg',
+    ctaText: 'Frigorifero che non raffredda? Contattaci!'
   },
   {
     id: 'forno',
@@ -47,7 +50,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 14h8M8 10h8" />
       </svg>
     ),
-    image: '/images/forno.jpg'
+    image: '/images/forno.jpg',
+    ctaText: 'Problemi con il forno? Riparazione veloce!'
   },
   {
     id: 'asciugatrice',
@@ -58,7 +62,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 3h8m-8 3h8m-4 7a4 4 0 100-8 4 4 0 000 8z" />
       </svg>
     ),
-    image: '/images/asciugatrice.jpg'
+    image: '/images/asciugatrice.jpg',
+    ctaText: 'Asciugatrice guasta? Risolviamo subito!'
   }
 ];
 
@@ -91,13 +96,25 @@ const ServicesSection = () => {
                 <div className="mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold mb-2 text-[#1e3a8a]">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                <Link 
-                  to={`/servizi/${service.id}`}
-                  className="inline-flex items-center text-[#1e3a8a] hover:text-[#10b981] font-medium transition-colors"
-                >
-                  Scopri di più
-                  <ArrowRight size={16} className="ml-1 group-hover:ml-2 transition-all" />
-                </Link>
+                
+                <div className="flex flex-col space-y-3">
+                  <h4 className="text-[#10b981] font-semibold">{service.ctaText}</h4>
+                  <div className="flex justify-between items-center">
+                    <Link 
+                      to={`/servizi/${service.id}`}
+                      className="inline-flex items-center text-[#1e3a8a] hover:text-[#10b981] font-medium transition-colors"
+                    >
+                      Scopri di più
+                      <ArrowRight size={16} className="ml-1 group-hover:ml-2 transition-all" />
+                    </Link>
+                    
+                    <Link to="/contatti" className="inline-block">
+                      <Button className="bg-[#1e3a8a] hover:bg-[#2563eb] text-white font-medium text-sm py-2">
+                        Richiedi Intervento
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

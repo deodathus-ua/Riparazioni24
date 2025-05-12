@@ -7,6 +7,7 @@ import ServicesSection from '@/components/Home/ServicesSection';
 import TestimonialsSection from '@/components/Home/TestimonialsSection';
 import MapSection from '@/components/Home/MapSection';
 import CTASection from '@/components/Home/CTASection';
+import FloatingCTA from '@/components/FloatingCTA';
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <TestimonialsSection />
       <MapSection />
       <CTASection />
+      <FloatingCTA />
 
       {/* Schema.org LocalBusiness markup for SEO */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
