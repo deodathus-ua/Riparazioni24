@@ -49,7 +49,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold text-brand-blue;
+    @apply font-semibold text-[#1e3a8a];
   }
 
   .container {
@@ -57,15 +57,40 @@
   }
 
   .btn-primary {
-    @apply bg-brand-orange hover:bg-brand-lightOrange text-white font-semibold py-3 px-6 rounded-md transition-colors duration-300 shadow-md;
+    @apply bg-[#10b981] hover:bg-[#059669] text-white font-semibold py-3 px-6 rounded-md transition-colors duration-300 shadow-md;
   }
 
   .btn-secondary {
-    @apply bg-brand-blue hover:bg-brand-lightBlue text-white font-semibold py-3 px-6 rounded-md transition-colors duration-300 shadow-md;
+    @apply bg-[#1e3a8a] hover:bg-[#2563eb] text-white font-semibold py-3 px-6 rounded-md transition-colors duration-300 shadow-md;
   }
 
   /* Schema.org markup for LocalBusiness - hidden visually but available for SEO */
   .schema-org-markup {
     @apply hidden;
+  }
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
   }
 }

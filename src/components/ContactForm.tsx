@@ -12,11 +12,7 @@ const applianceOptions = [
   { value: 'lavastoviglie', label: 'Lavastoviglie' },
   { value: 'frigorifero', label: 'Frigorifero' },
   { value: 'forno', label: 'Forno' },
-  { value: 'microonde', label: 'Microonde' },
-  { value: 'piano-cottura', label: 'Piano Cottura' },
-  { value: 'asciugatrice', label: 'Asciugatrice' },
-  { value: 'congelatore', label: 'Congelatore' },
-  { value: 'altro', label: 'Altro Elettrodomestico' },
+  { value: 'asciugatrice', label: 'Asciugatrice' }
 ];
 
 const locationOptions = [
@@ -131,11 +127,11 @@ const ContactForm: React.FC<ContactFormProps> = ({
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg">
       <div className="text-center mb-6">
-        <h2 className="text-2xl font-bold">{title}</h2>
+        <h2 className="text-2xl font-bold text-[#1e3a8a]">{title}</h2>
         <p className="text-gray-600 mt-2">{description}</p>
       </div>
       
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 gap-5">
           <div className="space-y-2">
             <Label htmlFor="fullName">Nome e Cognome *</Label>
@@ -146,6 +142,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
               onChange={handleChange}
               placeholder="Inserisci il tuo nome completo"
               required
+              className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
             />
           </div>
           
@@ -159,6 +156,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
               onChange={handleChange}
               placeholder="Inserisci il tuo numero di telefono"
               required
+              className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
             />
           </div>
           
@@ -171,6 +169,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
               value={formData.email}
               onChange={handleChange}
               placeholder="Inserisci la tua email (facoltativo)"
+              className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
             />
           </div>
           
@@ -180,7 +179,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
               value={formData.applianceType}
               onValueChange={(value) => handleSelectChange('applianceType', value)}
             >
-              <SelectTrigger>
+              <SelectTrigger className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]">
                 <SelectValue placeholder="Seleziona l'elettrodomestico" />
               </SelectTrigger>
               <SelectContent>
@@ -199,7 +198,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
               value={formData.location}
               onValueChange={(value) => handleSelectChange('location', value)}
             >
-              <SelectTrigger>
+              <SelectTrigger className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]">
                 <SelectValue placeholder="Seleziona la tua località" />
               </SelectTrigger>
               <SelectContent>
@@ -222,6 +221,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
               placeholder="Descrivi brevemente il problema che riscontri con il tuo elettrodomestico"
               rows={4}
               required
+              className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
             />
           </div>
           
@@ -235,16 +235,16 @@ const ContactForm: React.FC<ContactFormProps> = ({
               className="mt-1"
             />
             <label htmlFor="privacyAccepted" className="text-sm text-gray-600">
-              Ho letto e accetto la <a href="/privacy-policy" className="text-brand-blue hover:text-brand-lightBlue underline">Privacy Policy</a> *
+              Ho letto e accetto la <a href="/privacy-policy" className="text-[#1e3a8a] hover:text-[#10b981] underline">Privacy Policy</a> *
             </label>
           </div>
           
           <Button 
             type="submit" 
-            className="btn-primary w-full" 
+            className="bg-[#10b981] hover:bg-[#059669] text-white font-semibold py-3 px-6 w-full" 
             disabled={isSubmitting}
           >
-            {isSubmitting ? 'Invio in corso...' : 'Invia Richiesta'}
+            {isSubmitting ? 'Invio in corso...' : 'Richiedi Preventivo Gratuito'}
           </Button>
         </div>
       </form>

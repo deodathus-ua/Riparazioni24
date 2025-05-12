@@ -218,56 +218,56 @@ const servicesData = {
       }
     ]
   },
-  "piccoli-elettrodomestici": {
-    title: "Riparazione Piccoli Elettrodomestici a Milano",
-    description: "Servizio di riparazione professionale per piccoli elettrodomestici a Milano: microonde, piani cottura, asciugatrici e altro ancora.",
-    keywords: "riparazione piccoli elettrodomestici Milano, riparazione microonde Milano, assistenza piano cottura, riparazione asciugatrice",
-    imageUrl: "/images/piccoli-elettrodomestici.jpg",
+  asciugatrice: {
+    title: "Riparazione Asciugatrici a Milano",
+    description: "Assistenza e riparazione professionale di asciugatrici a Milano. Intervento tecnico qualificato su tutti i modelli e marche.",
+    keywords: "riparazione asciugatrici Milano, assistenza asciugatrice Milano, tecnico asciugatrici, riparare asciugatrice",
+    imageUrl: "/images/asciugatrice.jpg",
     bulletPoints: [
       "Intervento entro 24 ore in tutta Milano e provincia",
-      "Tecnici specializzati su tutti i tipi di piccoli elettrodomestici",
+      "Tecnici qualificati per tutti i tipi di asciugatrici",
       "Preventivi gratuiti e senza impegno",
       "Riparazione direttamente a domicilio",
       "Garanzia di 12 mesi su ricambi e manodopera",
-      "Servizio su misura per microonde, piani cottura, asciugatrici e molto altro"
+      "Competenza su modelli a pompa di calore e a condensazione"
     ],
     commonProblems: [
       {
-        title: "Riparazione Microonde",
-        description: "Interveniamo su guasti come problemi di riscaldamento, piatto rotante non funzionante, pannello di controllo difettoso o porte che non si chiudono correttamente. Esperienza su tutti i modelli, anche combinati e a incasso."
+        title: "L'asciugatrice non si accende",
+        description: "Potrebbe essere un problema di alimentazione elettrica, alla scheda o ai circuiti. I nostri tecnici possono diagnosticare e risolvere tutti i guasti elettrici."
       },
       {
-        title: "Riparazione Piani Cottura",
-        description: "Assistenza qualificata su piani a induzione, elettrici e a gas. Ripariamo problemi di accensione, fiamme irregolari, comandi difettosi e collegamenti elettrici. Tecnici certificati per la sicurezza degli impianti a gas."
+        title: "L'asciugatrice non scalda",
+        description: "Spesso causato da problemi alla resistenza, al termostato o alla pompa di calore. Interveniamo per ripristinare la corretta temperatura di asciugatura."
       },
       {
-        title: "Riparazione Asciugatrici",
-        description: "Interveniamo su tutti i guasti: problemi di asciugatura, sistemi di ventilazione, resistenze, schede elettroniche e sensori di umidità. Esperienza su modelli a pompa di calore e a condensazione."
+        title: "L'asciugatrice non asciuga completamente",
+        description: "Potrebbe dipendere dai sensori di umidità, dal filtro ostruito o da problemi al sistema di condensa. Ripariamo tutti i componenti necessari per un'asciugatura efficiente."
       },
       {
-        title: "Riparazione Robot da Cucina",
-        description: "Riparazione di mixer, impastatrici, frullatori e robot da cucina multifunzione. Ripristiniamo il corretto funzionamento di motori, ingranaggi e componenti elettronici."
+        title: "L'asciugatrice fa rumori anomali",
+        description: "Generalmente causato da cuscinetti usurati, cinghie danneggiate o oggetti estranei. Il nostro intervento ripristina il funzionamento silenzioso dell'elettrodomestico."
       },
       {
-        title: "Riparazione Macchine da Caffè",
-        description: "Assistenza specializzata su macchine espresso domestiche e professionali. Risolviamo problemi di erogazione, perdite d'acqua, malfunzionamenti delle pompe e dei sistemi di riscaldamento."
+        title: "Errori sul display dell'asciugatrice",
+        description: "Diagnostichiamo e risolviamo tutti i codici di errore, intervenendo sulla scheda elettronica, sui sensori o sui componenti danneggiati segnalati dal sistema."
       }
     ],
     brands: [
-      "Bosch", "Siemens", "Samsung", "LG", "Whirlpool", "Candy", "Electrolux", "DeLonghi", "Philips", "Dyson", "Kenwood", "Smeg", "Hotpoint", "Miele", "Beko", "Moulinex"
+      "Bosch", "Siemens", "Samsung", "LG", "Whirlpool", "Candy", "Electrolux", "AEG", "Indesit", "Ariston", "Smeg", "Hotpoint", "Miele", "Beko", "Haier"
     ],
     faqItems: [
       {
-        question: "Quando conviene riparare un piccolo elettrodomestico?",
-        answer: "In generale, conviene riparare se l'elettrodomestico ha un valore commerciale significativo e il costo della riparazione è inferiore al 40-50% del prezzo di acquisto di un nuovo apparecchio. Valutiamo caso per caso fornendo una consulenza onesta."
+        question: "Quanto costa riparare un'asciugatrice?",
+        answer: "Il costo dipende dal tipo di guasto e dal modello. Forniamo sempre un preventivo gratuito prima di procedere. In media, una riparazione standard può variare dai 70€ ai 200€, inclusi manodopera e ricambi."
       },
       {
-        question: "Riparate anche elettrodomestici fuori produzione?",
-        description: "Sì, grazie alla nostra esperienza e alla vasta rete di fornitori, spesso riusciamo a trovare ricambi anche per modelli datati o fuori produzione. Quando il ricambio originale non è disponibile, suggeriamo alternative compatibili di qualità."
+        question: "Quando conviene riparare un'asciugatrice invece di sostituirla?",
+        answer: "Di solito conviene riparare se l'asciugatrice ha meno di 5-6 anni, se il costo della riparazione è inferiore al 40-50% del prezzo di un nuovo elettrodomestico, e se i pezzi di ricambio sono facilmente reperibili."
       },
       {
-        question: "Offrite assistenza a domicilio anche per piccoli elettrodomestici?",
-        answer: "Sì, offriamo assistenza a domicilio per tutti i tipi di elettrodomestici, inclusi quelli di piccole dimensioni, se la riparazione lo richiede. Per alcuni apparecchi più piccoli, potrebbe essere più conveniente la riparazione presso la nostra officina."
+        question: "Quanto tempo richiede una riparazione di asciugatrice?",
+        answer: "La maggior parte delle riparazioni viene completata in un singolo intervento che dura tra 1 e 2 ore. Per guasti più complessi o che richiedono ordinazione di ricambi specifici potrebbe essere necessario un secondo appuntamento."
       }
     ]
   }
