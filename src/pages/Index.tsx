@@ -32,6 +32,7 @@ const Index = () => {
           "image": "/images/logo.png",
           "telephone": "+393331234567",
           "email": "info@riparazioni24.it",
+          "description": "Riparazione elettrodomestici rapida e garantita a domicilio in tutta Milano. Costo uscita €40 anche senza riparazione.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Via Esempio 123",

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button'; // Aggiungiamo l'import del Button
 
 const services = [
   {
@@ -70,6 +71,9 @@ const ServicesSection = () => {
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Offriamo servizi professionali di riparazione per tutti i tipi di grandi elettrodomestici a Milano e provincia.
             I nostri tecnici qualificati intervengono rapidamente a domicilio per risolvere ogni problema.
+          </p>
+          <p className="text-md text-gray-800 mt-2 font-medium">
+            Costo dell'uscita: €40 anche senza riparazione
           </p>
         </div>
 
