@@ -14,7 +14,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 3h8m-8 3h8m-4 5a2 2 0 100-4 2 2 0 000 4z" />
       </svg>
     ),
-    image: 'https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=800&auto=format&fit=crop',
+    image: 'public/images/lavatrice.webp',
     ctaText: 'Ripara la tua lavatrice oggi!'
   },
   {
@@ -26,7 +26,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm0 4h14M8 10v7m8-7v7" />
       </svg>
     ),
-    image: 'https://images.unsplash.com/photo-1581622558667-3419a8dc5f83?q=80&w=800&auto=format&fit=crop',
+    image: 'public/images/lavastoviglie.webp',
     ctaText: 'Lavastoviglie che non lava? Chiama ora!'
   },
   {
@@ -38,7 +38,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm0 9h14M9 3v9m0 3v6" />
       </svg>
     ),
-    image: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?q=80&w=800&auto=format&fit=crop',
+    image: 'public/images/frigo.webp',
     ctaText: 'Frigorifero che non raffredda? Contattaci!'
   },
   {
@@ -50,7 +50,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 14h8M8 10h8" />
       </svg>
     ),
-    image: 'https://images.unsplash.com/photo-1585351923007-bf6a311e1d5a?q=80&w=800&auto=format&fit=crop',
+    image: 'public/images/forno.webp',
     ctaText: 'Problemi con il forno? Riparazione veloce!'
   },
   {
@@ -62,8 +62,20 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 3h8m-8 3h8m-4 7a4 4 0 100-8 4 4 0 000 8z" />
       </svg>
     ),
-    image: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=800&auto=format&fit=crop',
+    image: 'public/images/asciugatrice.webp',
     ctaText: 'Asciugatrice guasta? Risolviamo subito!'
+  },
+  {
+    id: 'piano-cottura',
+    title: 'Riparazione Piani Cottura',
+    description: 'Ripariamo piani cottura a gas ed elettrici con problemi di accensione, bruciatori o circuiti elettronici.',
+    icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-[#1e3a8a]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm2 4h10M7 10h2m6 0h2m-5 4a2 2 0 100-4 2 2 0 000 4z" />
+        </svg>
+    ),
+    image: 'public/images/pianocottura.webp',
+    ctaText: 'Piano cottura non funziona? Contattaci!'
   }
 ];
 

@@ -10,7 +10,7 @@ const servicesData = {
     title: "Riparazione Lavatrici a Milano",
     description: "Servizio professionale di riparazione lavatrici a Milano e provincia con interventi rapidi e prezzi competitivi. Tecnici specializzati per tutti i modelli e marche.",
     keywords: "riparazione lavatrici Milano, assistenza lavatrice Milano, tecnico lavatrici, riparare lavatrice",
-    imageUrl: "/images/lavatrice.jpg",
+    imageUrl: "/images/lavatrice.webp",
     bulletPoints: [
       "Intervento entro 24 ore in tutta Milano e provincia",
       "Tecnici specializzati con esperienza pluriennale su tutte le marche",
@@ -63,7 +63,7 @@ const servicesData = {
     title: "Riparazione Lavastoviglie a Milano",
     description: "Assistenza e riparazione professionale di lavastoviglie a Milano e provincia. Intervento rapido su tutti i modelli e marche con garanzia sulle riparazioni.",
     keywords: "riparazione lavastoviglie Milano, assistenza lavastoviglie Milano, tecnico lavastoviglie, riparare lavastoviglie",
-    imageUrl: "/images/lavastoviglie.jpg",
+    imageUrl: "/images/lavastoviglie.webp",
     bulletPoints: [
       "Intervento entro 24 ore in tutta Milano e provincia",
       "Tecnici specializzati con esperienza pluriennale su tutte le marche",
@@ -116,7 +116,7 @@ const servicesData = {
     title: "Riparazione Frigoriferi a Milano",
     description: "Assistenza e riparazione professionale di frigoriferi a Milano. Intervento rapido su tutti i modelli e marche di frigoriferi e congelatori.",
     keywords: "riparazione frigorifero Milano, assistenza frigoriferi Milano, tecnico frigoriferi, riparare frigorifero",
-    imageUrl: "/images/frigorifero.jpg",
+    imageUrl: "/images/frigo_2.webp",
     bulletPoints: [
       "Intervento rapido entro 24 ore in tutta Milano e provincia",
       "Tecnici certificati F-GAS per la gestione dei gas refrigeranti",
@@ -169,7 +169,7 @@ const servicesData = {
     title: "Riparazione Forni a Milano",
     description: "Assistenza e riparazione professionale di forni elettrici e a gas a Milano. Intervento tecnico qualificato su tutti i modelli e marche.",
     keywords: "riparazione forni Milano, assistenza forno Milano, tecnico forni, riparare forno elettrico",
-    imageUrl: "/images/forno.jpg",
+    imageUrl: "/images/forno.webp",
     bulletPoints: [
       "Intervento entro 24 ore in tutta Milano e provincia",
       "Tecnici qualificati per forni elettrici e a gas",
@@ -222,7 +222,7 @@ const servicesData = {
     title: "Riparazione Asciugatrici a Milano",
     description: "Assistenza e riparazione professionale di asciugatrici a Milano. Intervento tecnico qualificato su tutti i modelli e marche.",
     keywords: "riparazione asciugatrici Milano, assistenza asciugatrice Milano, tecnico asciugatrici, riparare asciugatrice",
-    imageUrl: "/images/asciugatrice.jpg",
+    imageUrl: "/images/asciugatrice.webp",
     bulletPoints: [
       "Intervento entro 24 ore in tutta Milano e provincia",
       "Tecnici qualificati per tutti i tipi di asciugatrici",

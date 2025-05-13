@@ -40,9 +40,9 @@ const Header = () => {
 
           {/* Call to Action */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:+393331234567" className="flex items-center space-x-2 text-[#1e3a8a] hover:text-[#10b981] transition-colors">
+            <a href="tel:+39 320 550 9145" className="flex items-center space-x-2 text-[#1e3a8a] hover:text-[#10b981] transition-colors">
               <Phone size={18} />
-              <span className="font-semibold">333 123 4567</span>
+              <span className="font-semibold">+39 320 550 9145</span>
             </a>
             <Link to="/contatti">
               <Button className="bg-[#10b981] hover:bg-[#059669] text-white font-semibold py-3 px-6 rounded-md transition-colors duration-300 shadow-md">
@@ -75,9 +75,9 @@ const Header = () => {
               </div>
               <Link to="/chi-siamo" className="font-medium py-2 hover:text-[#1e3a8a] transition-colors" onClick={toggleMenu}>Chi Siamo</Link>
               <Link to="/contatti" className="font-medium py-2 hover:text-[#1e3a8a] transition-colors" onClick={toggleMenu}>Contatti</Link>
-              <a href="tel:+393331234567" className="flex items-center space-x-2 text-[#1e3a8a] font-semibold py-2">
+              <a href="tel:+39 320 550 9145" className="flex items-center space-x-2 text-[#1e3a8a] font-semibold py-2">
                 <Phone size={18} />
-                <span>333 123 4567</span>
+                <span>+39 320 550 9145</span>
               </a>
               <Link to="/contatti" className="inline-block" onClick={toggleMenu}>
                 <Button className="bg-[#10b981] hover:bg-[#059669] text-white w-full">

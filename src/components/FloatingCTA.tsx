@@ -52,7 +52,7 @@ const FloatingCTA = () => {
           <p className="text-sm text-gray-500">Riparazione garantita in tutta Milano</p>
         </div>
         <div className="flex items-center space-x-2">
-          <a href="tel:+393331234567" className="block">
+          <a href="tel:+39 320 550 9145" className="block">
             <Button size="sm" className="bg-[#10b981] hover:bg-[#059669] text-white whitespace-nowrap">
               <Phone size={16} className="mr-1 hidden md:inline" />
               Chiama ora

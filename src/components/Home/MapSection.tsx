@@ -15,7 +15,7 @@ const MapSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 bg-white rounded-lg shadow-lg overflow-hidden h-[400px]">
-            {/* Google Map Embed with improved appearance */}
+            {/* Google Maps Embed with improved appearance */}
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89547.71469631314!2d9.107185542285159!3d45.46995957107543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c1493f1275e7%3A0x3cffcd13c6740e8d!2sMilano%20MI!5e0!3m2!1sit!2sit!4v1649751234567!5m2!1sit!2sit"
               width="100%"
@@ -93,10 +93,10 @@ const MapSection = () => {
             <div className="mt-6">
               <h4 className="font-semibold mb-2">Hai bisogno di assistenza?</h4>
               <a 
-                href="tel:+393331234567" 
+                href="tel:+39 320 550 9145"
                 className="btn-primary inline-block w-full text-center"
               >
-                Chiamaci al 333 123 4567
+                Chiamaci al +39 320 550 9145
               </a>
             </div>
           </div>

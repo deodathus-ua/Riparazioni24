@@ -10,11 +10,11 @@ const HeroSection = () => {
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1581092160607-ee22731cc43d?q=80&w=1920&auto=format&fit=crop" 
+          src="public/images/heroblock.webp"
           alt="Tecnico che ripara elettrodomestico" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/90 to-[#1e40af]/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a9a]/40 to-[#1e40af]/35"></div>
       </div>
       
       <div className="container relative z-10">
@@ -33,7 +33,7 @@ const HeroSection = () => {
               Interventi su lavatrici, lavastoviglie, frigoriferi e forni con garanzia di 12 mesi.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="tel:+393331234567">
+              <a href="tel:+39 320 550 9145">
                 <Button size="lg" className="bg-[#10b981] hover:bg-[#059669] text-white font-semibold py-3 px-6 rounded-md transition-colors duration-300 shadow-md btn-hover-effect">
                   <Phone size={20} className="mr-2" />
                   Chiama Ora
