@@ -14,7 +14,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 3h8m-8 3h8m-4 5a2 2 0 100-4 2 2 0 000 4z" />
       </svg>
     ),
-    image: '/images/lavatrice.jpg',
+    image: 'https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=800&auto=format&fit=crop',
     ctaText: 'Ripara la tua lavatrice oggi!'
   },
   {
@@ -26,7 +26,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm0 4h14M8 10v7m8-7v7" />
       </svg>
     ),
-    image: '/images/lavastoviglie.jpg',
+    image: 'https://images.unsplash.com/photo-1581622558667-3419a8dc5f83?q=80&w=800&auto=format&fit=crop',
     ctaText: 'Lavastoviglie che non lava? Chiama ora!'
   },
   {
@@ -38,7 +38,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm0 9h14M9 3v9m0 3v6" />
       </svg>
     ),
-    image: '/images/frigorifero.jpg',
+    image: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?q=80&w=800&auto=format&fit=crop',
     ctaText: 'Frigorifero che non raffredda? Contattaci!'
   },
   {
@@ -50,7 +50,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 14h8M8 10h8" />
       </svg>
     ),
-    image: '/images/forno.jpg',
+    image: 'https://images.unsplash.com/photo-1585351923007-bf6a311e1d5a?q=80&w=800&auto=format&fit=crop',
     ctaText: 'Problemi con il forno? Riparazione veloce!'
   },
   {
@@ -62,7 +62,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 3h8m-8 3h8m-4 7a4 4 0 100-8 4 4 0 000 8z" />
       </svg>
     ),
-    image: '/images/asciugatrice.jpg',
+    image: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=800&auto=format&fit=crop',
     ctaText: 'Asciugatrice guasta? Risolviamo subito!'
   }
 ];
@@ -77,19 +77,19 @@ const ServicesSection = () => {
             Offriamo servizi professionali di riparazione per tutti i tipi di grandi elettrodomestici a Milano e provincia.
             I nostri tecnici qualificati intervengono rapidamente a domicilio per risolvere ogni problema.
           </p>
-          <p className="text-md text-gray-800 mt-2 font-medium">
+          <p className="text-md text-gray-800 mt-4 font-medium px-4 py-2 bg-[#10b981]/10 inline-block rounded-full">
             Costo dell'uscita: €40 anche senza riparazione
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <div key={service.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+            <div key={service.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group hover-card">
               <div className="h-48 overflow-hidden">
                 <img 
                   src={service.image} 
                   alt={service.title} 
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="p-6">
@@ -102,7 +102,7 @@ const ServicesSection = () => {
                   <div className="flex justify-between items-center">
                     <Link 
                       to={`/servizi/${service.id}`}
-                      className="inline-flex items-center text-[#1e3a8a] hover:text-[#10b981] font-medium transition-colors"
+                      className="inline-flex items-center text-[#1e3a8a] hover:text-[#10b981] font-medium transition-colors underline-link"
                     >
                       Scopri di più
                       <ArrowRight size={16} className="ml-1 group-hover:ml-2 transition-all" />
@@ -122,7 +122,7 @@ const ServicesSection = () => {
 
         <div className="mt-10 text-center">
           <Link to="/contatti" className="inline-block">
-            <Button className="bg-[#10b981] hover:bg-[#059669] text-white font-semibold py-3 px-6 rounded-md transition-colors duration-300 shadow-md">
+            <Button className="bg-[#10b981] hover:bg-[#059669] text-white font-semibold py-3 px-8 rounded-md transition-colors duration-300 shadow-md pulse-highlight">
               Richiedi un intervento ora
             </Button>
           </Link>

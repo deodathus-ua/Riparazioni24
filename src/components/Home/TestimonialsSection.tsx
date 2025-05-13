@@ -11,7 +11,8 @@ const testimonials = [
     location: 'Milano Centro',
     rating: 5,
     text: 'Servizio eccellente! Hanno riparato la mia lavatrice in giornata. Tecnico professionale e prezzi onesti. Consigliatissimo!',
-    service: 'Riparazione Lavatrice'
+    service: 'Riparazione Lavatrice',
+    image: 'https://randomuser.me/api/portraits/men/32.jpg'
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ const testimonials = [
     location: 'Sesto San Giovanni',
     rating: 5,
     text: 'Il frigorifero ha smesso di raffreddare e temevo di dover comprarne uno nuovo. Invece il tecnico ha risolto il problema in meno di un\'ora. Ottimo servizio!',
-    service: 'Riparazione Frigorifero'
+    service: 'Riparazione Frigorifero',
+    image: 'https://randomuser.me/api/portraits/women/44.jpg'
   },
   {
     id: 3,
@@ -27,7 +29,8 @@ const testimonials = [
     location: 'Cinisello Balsamo',
     rating: 4,
     text: 'Molto soddisfatto della riparazione della lavastoviglie. Preventivo chiaro e nessun costo aggiuntivo. Li contatterò sicuramente per future necessità.',
-    service: 'Riparazione Lavastoviglie'
+    service: 'Riparazione Lavastoviglie',
+    image: 'https://randomuser.me/api/portraits/men/68.jpg'
   },
   {
     id: 4,
@@ -35,7 +38,8 @@ const testimonials = [
     location: 'Rho',
     rating: 5,
     text: 'Tecnici disponibili e preparati. Hanno riparato il forno in modo rapido e professionale. Prezzo in linea con il preventivo. Grazie!',
-    service: 'Riparazione Forno'
+    service: 'Riparazione Forno',
+    image: 'https://randomuser.me/api/portraits/women/65.jpg'
   }
 ];
 
@@ -50,10 +54,21 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
-              <div className="flex items-center mb-4">
+            <div key={testimonial.id} className="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow hover-card">
+              <div className="flex items-center gap-3 mb-4">
+                <img 
+                  src={testimonial.image} 
+                  alt={testimonial.name} 
+                  className="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <p className="font-semibold">{testimonial.name}</p>
+                  <p className="text-sm text-gray-500">{testimonial.location}</p>
+                </div>
+              </div>
+              <div className="flex items-center mb-3">
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
@@ -64,9 +79,7 @@ const TestimonialsSection = () => {
               </div>
               <p className="text-gray-600 mb-4 italic">"{testimonial.text}"</p>
               <div className="mt-4">
-                <p className="font-semibold">{testimonial.name}</p>
-                <p className="text-sm text-gray-500">{testimonial.location}</p>
-                <p className="text-sm text-[#1e3a8a] mt-1">{testimonial.service}</p>
+                <p className="text-sm text-[#1e3a8a] font-medium">{testimonial.service}</p>
               </div>
             </div>
           ))}
@@ -86,13 +99,13 @@ const TestimonialsSection = () => {
         </div>
         
         <div className="mt-10 text-center">
-          <div className="max-w-2xl mx-auto bg-[#1e3a8a]/5 rounded-lg p-6 border border-[#1e3a8a]/10">
+          <div className="max-w-2xl mx-auto bg-gradient-to-r from-[#1e3a8a]/5 to-[#10b981]/5 rounded-lg p-8 border border-[#1e3a8a]/10 shadow-md">
             <h3 className="text-2xl font-bold mb-4 text-[#1e3a8a]">Unisciti ai nostri clienti soddisfatti!</h3>
             <p className="text-gray-700 mb-6">
               Anche il tuo elettrodomestico merita una riparazione professionale e garantita. Contattaci ora per un intervento rapido e risolutivo.
             </p>
             <Link to="/contatti">
-              <Button size="lg" className="bg-[#1e3a8a] hover:bg-[#2563eb] text-white font-semibold py-3 px-8">
+              <Button size="lg" className="bg-[#10b981] hover:bg-[#059669] text-white font-semibold py-3 px-8 pulse-highlight">
                 Richiedi il tuo intervento ora
               </Button>
             </Link>

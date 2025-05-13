@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Instagram, MessageSquare } from 'lucide-react';
+import { TikTok } from '@/components/icons/TikTok';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -17,14 +18,14 @@ const Footer = () => {
               Servizio professionale di riparazione elettrodomestici a Milano e provincia. Interventi rapidi, garanzia sui ricambi e prezzi trasparenti.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook" className="text-gray-300 hover:text-brand-orange transition-colors">
-                <Facebook />
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="text-gray-300 hover:text-[#10b981] transition-colors">
+                <Instagram size={24} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="text-gray-300 hover:text-brand-orange transition-colors">
-                <Instagram />
+              <a href="https://tiktok.com" target="_blank" rel="noreferrer" aria-label="TikTok" className="text-gray-300 hover:text-[#10b981] transition-colors">
+                <TikTok size={24} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-gray-300 hover:text-brand-orange transition-colors">
-                <Linkedin />
+              <a href="https://wa.me/393331234567" target="_blank" rel="noreferrer" aria-label="WhatsApp" className="text-gray-300 hover:text-[#10b981] transition-colors">
+                <MessageSquare size={24} />
               </a>
             </div>
           </div>
@@ -34,19 +35,19 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4 text-white">I Nostri Servizi</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/servizi/lavatrice" className="text-gray-300 hover:text-brand-orange transition-colors">Riparazione Lavatrici</Link>
+                <Link to="/servizi/lavatrice" className="text-gray-300 hover:text-[#10b981] transition-colors">Riparazione Lavatrici</Link>
               </li>
               <li>
-                <Link to="/servizi/lavastoviglie" className="text-gray-300 hover:text-brand-orange transition-colors">Riparazione Lavastoviglie</Link>
+                <Link to="/servizi/lavastoviglie" className="text-gray-300 hover:text-[#10b981] transition-colors">Riparazione Lavastoviglie</Link>
               </li>
               <li>
-                <Link to="/servizi/frigorifero" className="text-gray-300 hover:text-brand-orange transition-colors">Riparazione Frigoriferi</Link>
+                <Link to="/servizi/frigorifero" className="text-gray-300 hover:text-[#10b981] transition-colors">Riparazione Frigoriferi</Link>
               </li>
               <li>
-                <Link to="/servizi/forno" className="text-gray-300 hover:text-brand-orange transition-colors">Riparazione Forni</Link>
+                <Link to="/servizi/forno" className="text-gray-300 hover:text-[#10b981] transition-colors">Riparazione Forni</Link>
               </li>
               <li>
-                <Link to="/servizi/piccoli-elettrodomestici" className="text-gray-300 hover:text-brand-orange transition-colors">Altri Elettrodomestici</Link>
+                <Link to="/servizi/piccoli-elettrodomestici" className="text-gray-300 hover:text-[#10b981] transition-colors">Altri Elettrodomestici</Link>
               </li>
             </ul>
           </div>
@@ -56,25 +57,25 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4 text-white">Contatti</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <Phone size={20} className="mr-2 text-brand-orange flex-shrink-0 mt-1" />
+                <Phone size={20} className="mr-2 text-[#10b981] flex-shrink-0 mt-1" />
                 <span className="text-gray-300">
-                  <a href="tel:+393331234567" className="hover:text-brand-orange transition-colors">333 123 4567</a>
+                  <a href="tel:+393331234567" className="hover:text-[#10b981] transition-colors">333 123 4567</a>
                 </span>
               </li>
               <li className="flex items-start">
-                <Mail size={20} className="mr-2 text-brand-orange flex-shrink-0 mt-1" />
+                <Mail size={20} className="mr-2 text-[#10b981] flex-shrink-0 mt-1" />
                 <span className="text-gray-300">
-                  <a href="mailto:info@elettroassistenza-milano.it" className="hover:text-brand-orange transition-colors">info@elettroassistenza-milano.it</a>
+                  <a href="mailto:info@elettroassistenza-milano.it" className="hover:text-[#10b981] transition-colors">info@elettroassistenza-milano.it</a>
                 </span>
               </li>
               <li className="flex items-start">
-                <MapPin size={20} className="mr-2 text-brand-orange flex-shrink-0 mt-1" />
+                <MapPin size={20} className="mr-2 text-[#10b981] flex-shrink-0 mt-1" />
                 <span className="text-gray-300">
                   Via Esempio 123, 20100 Milano
                 </span>
               </li>
               <li className="flex items-start">
-                <Clock size={20} className="mr-2 text-brand-orange flex-shrink-0 mt-1" />
+                <Clock size={20} className="mr-2 text-[#10b981] flex-shrink-0 mt-1" />
                 <span className="text-gray-300">
                   Lun-Ven: 8:00-20:00<br />
                   Sab: 8:00-17:00
@@ -105,9 +106,9 @@ const Footer = () => {
         <div className="mt-12 pt-4 border-t border-gray-700 text-center text-gray-400 text-sm">
           <p>© {currentYear} ElettroAssistenza Milano. Tutti i diritti riservati.</p>
           <div className="mt-2 space-x-4">
-            <Link to="/privacy-policy" className="hover:text-brand-orange transition-colors">Privacy Policy</Link>
-            <Link to="/termini-servizio" className="hover:text-brand-orange transition-colors">Termini di Servizio</Link>
-            <Link to="/cookie-policy" className="hover:text-brand-orange transition-colors">Cookie Policy</Link>
+            <Link to="/privacy-policy" className="hover:text-[#10b981] transition-colors">Privacy Policy</Link>
+            <Link to="/termini-servizio" className="hover:text-[#10b981] transition-colors">Termini di Servizio</Link>
+            <Link to="/cookie-policy" className="hover:text-[#10b981] transition-colors">Cookie Policy</Link>
           </div>
         </div>
 

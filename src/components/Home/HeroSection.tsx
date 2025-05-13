@@ -6,8 +6,18 @@ import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white py-16 md:py-24">
-      <div className="container">
+    <section className="relative py-16 md:py-24">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1581092160607-ee22731cc43d?q=80&w=1920&auto=format&fit=crop" 
+          alt="Tecnico che ripara elettrodomestico" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/90 to-[#1e40af]/85"></div>
+      </div>
+      
+      <div className="container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 animate-fade-in">
             <div className="mb-8">
@@ -24,13 +34,13 @@ const HeroSection = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="tel:+393331234567">
-                <Button size="lg" className="bg-[#10b981] hover:bg-[#059669] text-white font-semibold py-3 px-6 rounded-md transition-colors duration-300 shadow-md">
+                <Button size="lg" className="bg-[#10b981] hover:bg-[#059669] text-white font-semibold py-3 px-6 rounded-md transition-colors duration-300 shadow-md btn-hover-effect">
                   <Phone size={20} className="mr-2" />
                   Chiama Ora
                 </Button>
               </a>
               <Link to="/contatti">
-                <Button size="lg" variant="outline" className="bg-white text-[#1e3a8a] hover:bg-gray-100 font-semibold">
+                <Button size="lg" variant="outline" className="bg-white text-[#1e3a8a] hover:bg-gray-100 font-semibold btn-hover-effect">
                   Preventivo Gratuito in 60 Secondi
                   <ArrowRight size={18} className="ml-2" />
                 </Button>
@@ -44,31 +54,31 @@ const HeroSection = () => {
           </div>
           <div className="relative animate-slide-up">
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/20">
-              <h3 className="text-2xl font-semibold mb-4">Perché sceglierci</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-white">Perché sceglierci</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <div className="mr-3 text-[#10b981]">
                     <Clock size={24} />
                   </div>
-                  <span>Interventi rapidi (anche in giornata) in tutta Milano e provincia</span>
+                  <span className="text-white">Interventi rapidi (anche in giornata) in tutta Milano e provincia</span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-3 text-[#10b981]">
                     <Shield size={24} />
                   </div>
-                  <span>Tecnici certificati con esperienza pluriennale</span>
+                  <span className="text-white">Tecnici certificati con esperienza pluriennale</span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-3 text-[#10b981]">
                     <Tag size={24} />
                   </div>
-                  <span>Prezzi trasparenti e preventivi gratuiti senza sorprese</span>
+                  <span className="text-white">Prezzi trasparenti e preventivi gratuiti senza sorprese</span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-3 text-[#10b981]">
                     <MapPin size={24} />
                   </div>
-                  <span>Copertura totale Milano e provincia 7 giorni su 7</span>
+                  <span className="text-white">Copertura totale Milano e provincia 7 giorni su 7</span>
                 </li>
               </ul>
             </div>
