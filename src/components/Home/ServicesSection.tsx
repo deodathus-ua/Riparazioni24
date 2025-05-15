@@ -14,7 +14,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 3h8m-8 3h8m-4 5a2 2 0 100-4 2 2 0 000 4z" />
       </svg>
     ),
-    image: 'public/images/lavatrice.webp',
+    image: '/images/lavatrice.webp',
     ctaText: 'Ripara la tua lavatrice oggi!'
   },
   {
@@ -26,7 +26,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm0 4h14M8 10v7m8-7v7" />
       </svg>
     ),
-    image: 'public/images/lavastoviglie.webp',
+    image: '/images/lavastoviglie.webp',
     ctaText: 'Lavastoviglie che non lava? Chiama ora!'
   },
   {
@@ -38,7 +38,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm0 9h14M9 3v9m0 3v6" />
       </svg>
     ),
-    image: 'public/images/frigo.webp',
+    image: '/images/frigo.webp',
     ctaText: 'Frigorifero che non raffredda? Contattaci!'
   },
   {
@@ -50,7 +50,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 14h8M8 10h8" />
       </svg>
     ),
-    image: 'public/images/forno.webp',
+    image: '/images/forno.webp',
     ctaText: 'Problemi con il forno? Riparazione veloce!'
   },
   {
@@ -62,7 +62,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 3h8m-8 3h8m-4 7a4 4 0 100-8 4 4 0 000 8z" />
       </svg>
     ),
-    image: 'public/images/asciugatrice.webp',
+    image: '/images/asciugatrice.webp',
     ctaText: 'Asciugatrice guasta? Risolviamo subito!'
   },
   {
@@ -74,7 +74,7 @@ const services = [
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm2 4h10M7 10h2m6 0h2m-5 4a2 2 0 100-4 2 2 0 000 4z" />
         </svg>
     ),
-    image: 'public/images/pianocottura.webp',
+    image: '/images/pianocottura.webp',
     ctaText: 'Piano cottura non funziona? Contattaci!'
   }
 ];

@@ -10,7 +10,7 @@ const HeroSection = () => {
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="public/images/heroblock.webp"
+          src="/images/heroblock.webp"
           alt="Tecnico che ripara elettrodomestico" 
           className="w-full h-full object-cover"
         />
