@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 const testimonials = [
   {
     id: 1,
-    name: 'Serhii Savchuk',
+    name: 'Danilo Schevchuk',
     location: 'Milano Centro',
     rating: 5,
     text: 'La lavatrice non funzionava più. Il tecnico arrivato puntuale, ha individuato il problema e risolto in un’ora. Prezzo ragionevole',

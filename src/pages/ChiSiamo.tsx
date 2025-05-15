@@ -50,7 +50,7 @@ const ChiSiamo = () => {
                 <p className="text-gray-600">Riparazioni effettuate</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <h3 className="text-3xl font-bold text-[#10b981]">8+</h3>
+                <h3 className="text-3xl font-bold text-[#10b981]">10+</h3>
                 <p className="text-gray-600">Anni di esperienza</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
@@ -66,14 +66,14 @@ const ChiSiamo = () => {
                     <img src="/images/tecnico.webp" alt="Tecnico elettrodomestici al lavoro" className="w-full h-auto" />
                   </div>
                   <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
-                    <p className="font-bold text-[#1e3a8a]">+8 anni di esperienza</p>
+                    <p className="font-bold text-[#1e3a8a]">+10 anni di esperienza</p>
                   </div>
                 </div>
               </div>
               <div className="space-y-6">
                 <h2 className="text-3xl font-bold">La Nostra Storia</h2>
                 <p className="text-lg text-gray-600">
-                  Fondata nel 2022, Riparazioni 24 è nata dalla visione dei fratelli Yaroslav e Bohdan Stasyuk,
+                  Fondata nel 2017, Riparazioni 24 è nata dalla visione dei fratelli Yaroslav e Bohdan Stasyuk,
                   che hanno unito la loro passione per la tecnologia e il servizio clienti per creare un'azienda leader
                   nella riparazione di elettrodomestici a Milano. La nostra missione è garantire soluzioni rapide e affidabili
                   per ogni esigenza.
@@ -109,7 +109,7 @@ const ChiSiamo = () => {
                   <h3 className="text-xl font-bold mb-1 text-center">Yaroslav Stasyuk</h3>
                   <p className="text-[#10b981] font-medium text-center mb-2">Tecnico Senior & Co-Founder</p>
                   <p className="text-gray-600 text-center">
-                    Con oltre 7 anni di esperienza nella riparazione di elettrodomestici, Yaroslav è un esperto in lavatrici, frigoriferi e forni.
+                    Con oltre 10 anni di esperienza nella riparazione di grandi elettrodomestici, Yaroslav è un esperto in lavatrici, frigoriferi e forni.
                     Come co-fondatore, guida il team con passione, garantendo interventi precisi e un servizio clienti impeccabile.
                   </p>
                 </div>
@@ -226,7 +226,7 @@ const ChiSiamo = () => {
                   </div>
                   <h3 className="text-xl font-bold mb-2">Esperienza Pluriennale</h3>
                   <p className="text-gray-600">
-                    Con oltre 8 anni di esperienza nel settore, abbiamo affrontato e risolto
+                    Con oltre 10 anni di esperienza nel settore, abbiamo affrontato e risolto
                     ogni tipo di guasto sui principali elettrodomestici.
                   </p>
                 </div>
