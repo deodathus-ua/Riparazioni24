@@ -29,7 +29,7 @@ const HeroSection = () => {
               </p>
             </div>
             <p className="text-xl text-gray-100 max-w-lg">
-              Ripariamo i tuoi elettrodomestici rapidamente, ovunque a Milano – anche in giornata. 
+              Ripariamo i tuoi elettrodomestici rapidamente, ovunque a Milano anche in giornata. 
               Interventi su lavatrici, lavastoviglie, frigoriferi e forni con garanzia di 12 mesi.
             </p>
             <div className="flex flex-wrap gap-4">

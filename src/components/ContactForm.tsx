@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useToast } from '@/components/ui/use-toast';
 import { Button } from '@/components/ui/button';
@@ -12,7 +11,7 @@ const applianceOptions = [
   { value: 'lavastoviglie', label: 'Lavastoviglie' },
   { value: 'frigorifero', label: 'Frigorifero' },
   { value: 'forno', label: 'Forno' },
-  { value: 'asciugatrice', label: 'Asciugatrice' }
+  { value: 'asciugatrice', label: 'Asciugatrice' },
 ];
 
 const locationOptions = [
@@ -34,10 +33,10 @@ interface ContactFormProps {
   description?: string;
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ 
-  title = "Richiedi Assistenza", 
-  description = "Compila il modulo e ti contatteremo entro 60 minuti per fissare un appuntamento."
-}) => {
+const ContactForm: React.FC<ContactFormProps> = ({
+                                                   title = "Richiedi Assistenza",
+                                                   description = "Compila il modulo e ti contatteremo entro 60 minuti per fissare un appuntamento."
+                                                 }) => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -47,62 +46,73 @@ const ContactForm: React.FC<ContactFormProps> = ({
     applianceType: '',
     location: '',
     problem: '',
-    privacyAccepted: false
+    privacyAccepted: false,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
     const checked = type === 'checkbox' ? (e.target as HTMLInputElement).checked : undefined;
-    
+
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: type === 'checkbox' ? checked : value,
     }));
   };
 
   const handleSelectChange = (name: string, value: string) => {
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate form
     if (!formData.fullName || !formData.phone || !formData.applianceType || !formData.location || !formData.problem) {
       toast({
         title: "Errore",
         description: "Per favore completa tutti i campi obbligatori.",
-        variant: "destructive"
+        variant: "destructive",
       });
       return;
     }
-    
+
     if (!formData.privacyAccepted) {
       toast({
         title: "Errore",
         description: "Per procedere devi accettare la privacy policy.",
-        variant: "destructive"
+        variant: "destructive",
       });
       return;
     }
-    
+
     setIsSubmitting(true);
 
     try {
-      // Mock form submission
-      // In a real application, you'd send this data to your backend
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
+      // Отправка данных на бэкенд
+      const response = await fetch('https://eagles-ia-occasionally-locking.trycloudflare.com/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Errore durante l\'invio.');
+      }
+
       // Success message
       toast({
         title: "Richiesta inviata!",
         description: "Ti ricontatteremo entro 60 minuti per fissare un appuntamento.",
-        variant: "default"
+        variant: "default",
       });
-      
+
       // Reset form
       setFormData({
         fullName: '',
@@ -111,13 +121,13 @@ const ContactForm: React.FC<ContactFormProps> = ({
         applianceType: '',
         location: '',
         problem: '',
-        privacyAccepted: false
+        privacyAccepted: false,
       });
     } catch (error) {
       toast({
         title: "Errore",
-        description: "Si è verificato un errore. Per favore riprova più tardi o contattaci telefonicamente.",
-        variant: "destructive"
+        description: error.message || "Si è verificato un errore. Per favore riprova più tardi o contattaci telefonicamente.",
+        variant: "destructive",
       });
     } finally {
       setIsSubmitting(false);
@@ -125,135 +135,135 @@ const ContactForm: React.FC<ContactFormProps> = ({
   };
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-lg">
-      <div className="text-center mb-6">
-        <h2 className="text-2xl font-bold text-[#1e3a8a]">{title}</h2>
-        <p className="text-gray-600 mt-2">{description}</p>
-      </div>
-      
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1 gap-5">
-          <div className="space-y-2">
-            <Label htmlFor="fullName">Nome e Cognome *</Label>
-            <Input
-              id="fullName"
-              name="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
-              placeholder="Inserisci il tuo nome completo"
-              required
-              className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
-            />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="phone">Numero di Telefono *</Label>
-            <Input
-              id="phone"
-              name="phone"
-              type="tel"
-              value={formData.phone}
-              onChange={handleChange}
-              placeholder="Inserisci il tuo numero di telefono"
-              required
-              className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
-            />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              name="email"
-              type="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Inserisci la tua email (facoltativo)"
-              className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
-            />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="applianceType">Tipo di Elettrodomestico *</Label>
-            <Select
-              value={formData.applianceType}
-              onValueChange={(value) => handleSelectChange('applianceType', value)}
-            >
-              <SelectTrigger className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]">
-                <SelectValue placeholder="Seleziona l'elettrodomestico" />
-              </SelectTrigger>
-              <SelectContent>
-                {applianceOptions.map(option => (
-                  <SelectItem key={option.value} value={option.value}>
-                    {option.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="location">Località *</Label>
-            <Select
-              value={formData.location}
-              onValueChange={(value) => handleSelectChange('location', value)}
-            >
-              <SelectTrigger className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]">
-                <SelectValue placeholder="Seleziona la tua località" />
-              </SelectTrigger>
-              <SelectContent>
-                {locationOptions.map(option => (
-                  <SelectItem key={option.value} value={option.value}>
-                    {option.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="problem">Descrizione del Problema *</Label>
-            <Textarea
-              id="problem"
-              name="problem"
-              value={formData.problem}
-              onChange={handleChange}
-              placeholder="Descrivi brevemente il problema che riscontri con il tuo elettrodomestico"
-              rows={4}
-              required
-              className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
-            />
-          </div>
-          
-          <div className="flex items-start space-x-2">
-            <input
-              type="checkbox"
-              id="privacyAccepted"
-              name="privacyAccepted"
-              checked={formData.privacyAccepted}
-              onChange={handleChange}
-              className="mt-1"
-            />
-            <label htmlFor="privacyAccepted" className="text-sm text-gray-600">
-              Ho letto e accetto la <a href="/privacy-policy" className="text-[#1e3a8a] hover:text-[#10b981] underline">Privacy Policy</a> *
-            </label>
-          </div>
-          
-          <Button 
-            type="submit" 
-            className="bg-[#10b981] hover:bg-[#059669] text-white font-semibold py-3 px-6 w-full" 
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? 'Invio in corso...' : 'Richiedi Preventivo Gratuito'}
-          </Button>
+      <div className="bg-white p-8 rounded-lg shadow-lg">
+        <div className="text-center mb-6">
+          <h2 className="text-2xl font-bold text-[#1e3a8a]">{title}</h2>
+          <p className="text-gray-600 mt-2">{description}</p>
         </div>
-      </form>
-      
-      <div className="mt-6 text-center text-sm text-gray-500">
-        <p>* Campi obbligatori</p>
-        <p className="mt-2">Risposta garantita entro 60 minuti negli orari di lavoro</p>
+
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid grid-cols-1 gap-5">
+            <div className="space-y-2">
+              <Label htmlFor="fullName">Nome e Cognome *</Label>
+              <Input
+                  id="fullName"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  placeholder="Inserisci il tuo nome completo"
+                  required
+                  className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="phone">Numero di Telefono *</Label>
+              <Input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="Inserisci il tuo numero di telefono"
+                  required
+                  className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="email">Email</Label>
+              <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Inserisci la tua email (facoltativo)"
+                  className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="applianceType">Tipo di Elettrodomestico *</Label>
+              <Select
+                  value={formData.applianceType}
+                  onValueChange={(value) => handleSelectChange('applianceType', value)}
+              >
+                <SelectTrigger className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]">
+                  <SelectValue placeholder="Seleziona l'elettrodomestico" />
+                </SelectTrigger>
+                <SelectContent>
+                  {applianceOptions.map(option => (
+                      <SelectItem key={option.value} value={option.value}>
+                        {option.label}
+                      </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="location">Località *</Label>
+              <Select
+                  value={formData.location}
+                  onValueChange={(value) => handleSelectChange('location', value)}
+              >
+                <SelectTrigger className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]">
+                  <SelectValue placeholder="Seleziona la tua località" />
+                </SelectTrigger>
+                <SelectContent>
+                  {locationOptions.map(option => (
+                      <SelectItem key={option.value} value={option.value}>
+                        {option.label}
+                      </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="problem">Descrizione del Problema *</Label>
+              <Textarea
+                  id="problem"
+                  name="problem"
+                  value={formData.problem}
+                  onChange={handleChange}
+                  placeholder="Descrivi brevemente il problema che riscontri con il tuo elettrodomestico"
+                  rows={4}
+                  required
+                  className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
+              />
+            </div>
+
+            <div className="flex items-start space-x-2">
+              <input
+                  type="checkbox"
+                  id="privacyAccepted"
+                  name="privacyAccepted"
+                  checked={formData.privacyAccepted}
+                  onChange={handleChange}
+                  className="mt-1"
+              />
+              <label htmlFor="privacyAccepted" className="text-sm text-gray-600">
+                Ho letto e accetto la <a href="/privacy-policy" className="text-[#1e3a8a] hover:text-[#10b981] underline">Privacy Policy</a> *
+              </label>
+            </div>
+
+            <Button
+                type="submit"
+                className="bg-[#10b981] hover:bg-[#059669] text-white font-semibold py-3 px-6 w-full"
+                disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Invio in corso...' : 'Richiedi Preventivo Gratuito'}
+            </Button>
+          </div>
+        </form>
+
+        <div className="mt-6 text-center text-sm text-gray-500">
+          <p>* Campi obbligatori</p>
+          <p className="mt-2">Risposta garantita entro 60 minuti negli orari di lavoro</p>
+        </div>
       </div>
-    </div>
   );
 };
 
