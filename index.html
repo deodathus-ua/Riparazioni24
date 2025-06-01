@@ -7,6 +7,14 @@
   <meta name="description" content="Riparazioni 24 è un'azienda specializzata nella riparazione di elettrodomestici a Milano. Servizio rapido, professionale e garantito." />
   <meta name="author" content="Riparazioni 24" />
 
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/main.tsx" as="script"/>
+    <link rel="preload" href="/images/heroblock.webp" as="image"/>
+
+    <!-- DNS prefetching -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
+    <link rel="dns-prefetch" href="//www.googletagmanager.com"/>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMT720KM42"></script>
     <script>
@@ -18,7 +26,11 @@
 
         gtag('js', new Date());
 
-        gtag('config', 'G-ZMT720KM42');
+        // Проверяем согласие на cookies перед инициализацией Google Analytics
+        const cookieConsent = localStorage.getItem('cookie_consent');
+        if (cookieConsent === 'accepted') {
+            gtag('config', 'G-ZMT720KM42');
+        }
     </script>
 
     <!-- Open Graph / Facebook -->

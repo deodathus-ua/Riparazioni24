@@ -16,7 +16,44 @@ const Contatti = () => {
           <meta name="keywords" content="contatti riparazione elettrodomestici Milano, telefono assistenza elettrodomestici, riparatore elettrodomestici Milano" />
         </Helmet>
 
-        {/* Hero Section */}
+          {/* Breadcrumb Navigation */}
+          <nav className="bg-gray-50 py-4" aria-label="Breadcrumb">
+              <div className="container">
+                  <ol className="flex items-center space-x-2 text-sm">
+                      <li>
+                          <a href="/" className="text-blue-600 hover:text-blue-800">Home</a>
+                      </li>
+                      <li className="text-gray-500">/</li>
+                      <li className="text-gray-700">Contatti</li>
+                  </ol>
+              </div>
+          </nav>
+
+          {/* Breadcrumb Schema */}
+          <script type="application/ld+json" dangerouslySetInnerHTML={{
+              __html: `
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://riparazioni24.eu/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Contatti",
+                "item": "https://riparazioni24.eu/contatti"
+              }
+            ]
+          }
+        `
+          }}/>
+
+          {/* Hero Section */}
         <section className="bg-gradient-to-r from-brand-blue to-blue-800 text-white py-16">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
@@ -164,6 +201,50 @@ const Contatti = () => {
                 </p>
               </div>
             </div>
+
+              {/* FAQ Schema */}
+              <script type="application/ld+json" dangerouslySetInnerHTML={{
+                  __html: `
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "Quanto costa una riparazione?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Il costo dipende dal tipo di guasto e dall'elettrodomestico. Forniamo sempre un preventivo gratuito e dettagliato prima di procedere con la riparazione. Non ci sono costi nascosti o sorprese."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Quanto tempo ci vuole per un intervento?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Interveniamo entro 24 ore dalla richiesta in tutta Milano e provincia. Per le urgenze, quando possibile, offriamo anche servizio in giornata. La durata dell'intervento dipende dal tipo di riparazione."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Fate anche installazione di nuovi elettrodomestici?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Sì, oltre alla riparazione, offriamo anche servizi di installazione professionale per tutti i tipi di elettrodomestici, garantendo la corretta messa in funzione e sicurezza."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Su quali marche intervenite?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Interveniamo su tutte le principali marche: Bosch, Siemens, Samsung, LG, Whirlpool, Candy, Electrolux, AEG, Indesit, Ariston, Smeg e molte altre. I nostri tecnici sono formati per intervenire su qualsiasi modello."
+                    }
+                  }
+                ]
+              }
+            `
+              }}/>
           </div>
         </section>
       </MainLayout>

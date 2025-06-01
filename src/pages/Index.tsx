@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import MainLayout from '@/components/Layout/MainLayout';
@@ -32,13 +31,13 @@ const Index = () => {
           "@type": "LocalBusiness",
           "name": "Riparazioni 24 Milano",
           "image": "/images/logo.png",
-          "telephone": "+393331234567",
-          "email": "info@riparazioni24.it",
-          "description": "Riparazione elettrodomestici rapida e garantita a domicilio in tutta Milano. Costo uscita €40 anche senza riparazione.",
+          "telephone": "+393205509145",
+          "email": "info@riparazioni24.eu",
+          "description": "Riparazione elettrodomestici rapida e garantita a domicilio in tutta Milano e provincia. Interventi su lavatrici, frigoriferi, lavastoviglie e forni.",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Via Esempio 123",
             "addressLocality": "Milano",
+            "addressRegion": "Lombardia",
             "postalCode": "20100",
             "addressCountry": "IT"
           },
@@ -62,8 +61,67 @@ const Index = () => {
             }
           ],
           "priceRange": "€€",
-          "servesCuisine": "Riparazione Elettrodomestici",
-          "areaServed": ["Milano", "Sesto San Giovanni", "Cinisello Balsamo", "Rho", "Rozzano"]
+          "serviceType": "Riparazione Elettrodomestici",
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Milano"
+            },
+            {
+              "@type": "City", 
+              "name": "Sesto San Giovanni"
+            },
+            {
+              "@type": "City",
+              "name": "Cinisello Balsamo"
+            },
+            {
+              "@type": "City",
+              "name": "Rho"
+            },
+            {
+              "@type": "City",
+              "name": "Rozzano"
+            }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servizi di Riparazione",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Riparazione Lavatrici",
+                  "description": "Riparazione e manutenzione lavatrici di tutte le marche"
+                }
+              },
+              {
+                "@type": "Offer", 
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Riparazione Frigoriferi",
+                  "description": "Riparazione e manutenzione frigoriferi e congelatori"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service", 
+                  "name": "Riparazione Lavastoviglie",
+                  "description": "Riparazione e manutenzione lavastoviglie"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Riparazione Forni",
+                  "description": "Riparazione forni elettrici e a gas"
+                }
+              }
+            ]
+          }
         }
       `}} />
     </MainLayout>

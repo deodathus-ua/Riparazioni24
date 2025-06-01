@@ -18,7 +18,44 @@ const ChiSiamo = () => {
           <meta name="keywords" content="riparazione elettrodomestici Milano, chi siamo, tecnici elettrodomestici Milano, assistenza elettrodomestici" />
         </Helmet>
 
-        {/* Hero Section */}
+          {/* Breadcrumb Navigation */}
+          <nav className="bg-gray-50 py-4" aria-label="Breadcrumb">
+              <div className="container">
+                  <ol className="flex items-center space-x-2 text-sm">
+                      <li>
+                          <a href="/" className="text-blue-600 hover:text-blue-800">Home</a>
+                      </li>
+                      <li className="text-gray-500">/</li>
+                      <li className="text-gray-700">Chi Siamo</li>
+                  </ol>
+              </div>
+          </nav>
+
+          {/* Breadcrumb Schema */}
+          <script type="application/ld+json" dangerouslySetInnerHTML={{
+              __html: `
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://riparazioni24.eu/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Chi Siamo",
+                "item": "https://riparazioni24.eu/chi-siamo"
+              }
+            ]
+          }
+        `
+          }}/>
+
+          {/* Hero Section */}
         <section className="bg-gradient-to-r from-[#1e3a8a] to-blue-800 text-white py-16 animate-fade-in">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
@@ -63,7 +100,14 @@ const ChiSiamo = () => {
               <div>
                 <div className="relative">
                   <div className="rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                    <img src="/images/tecnico.webp" alt="Tecnico elettrodomestici al lavoro" className="w-full h-auto" />
+                      <img
+                          src="/images/tecnico.webp"
+                          alt="Tecnico esperto di elettrodomestici al lavoro durante riparazione"
+                          className="w-full h-auto"
+                          loading="lazy"
+                          width="600"
+                          height="400"
+                      />
                   </div>
                   <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
                     <p className="font-bold text-[#1e3a8a]">+10 anni di esperienza</p>
@@ -103,7 +147,14 @@ const ChiSiamo = () => {
                 <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <div className="relative mb-4 h-48 w-48 mx-auto">
                     <div className="rounded-full overflow-hidden h-full w-full">
-                      <img src="/images/staff/yaroslav.webp" alt="Yaroslav Stasyuk" className="h-full w-full object-cover" />
+                        <img
+                            src="/images/staff/yaroslav.webp"
+                            alt="Yaroslav Stasyuk - Tecnico Senior e Co-Fondatore di Riparazioni 24"
+                            className="h-full w-full object-cover"
+                            loading="lazy"
+                            width="192"
+                            height="192"
+                        />
                     </div>
                   </div>
                   <h3 className="text-xl font-bold mb-1 text-center">Yaroslav Stasyuk</h3>
@@ -117,7 +168,14 @@ const ChiSiamo = () => {
                 <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <div className="relative mb-4 h-48 w-48 mx-auto">
                     <div className="rounded-full overflow-hidden h-full w-full">
-                      <img src="/images/staff/serhii.webp" alt="Serhii Savchuk" className="h-full w-full object-cover" />
+                        <img
+                            src="/images/staff/serhii.webp"
+                            alt="Serhii Savchuk - Responsabile Tecnico specializzato in diagnosi elettrodomestici"
+                            className="h-full w-full object-cover"
+                            loading="lazy"
+                            width="192"
+                            height="192"
+                        />
                     </div>
                   </div>
                   <h3 className="text-xl font-bold mb-1 text-center">Serhii Savchuk</h3>
@@ -131,7 +189,14 @@ const ChiSiamo = () => {
                 <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <div className="relative mb-4 h-48 w-48 mx-auto">
                     <div className="rounded-full overflow-hidden h-full w-full">
-                      <img src="/images/staff/bohdan.webp" alt="Bohdan Stasyuk" className="h-full w-full object-cover" />
+                        <img
+                            src="/images/staff/bohdan.webp"
+                            alt="Bohdan Stasyuk - Co-Fondatore e Responsabile Strategia Aziendale"
+                            className="h-full w-full object-cover"
+                            loading="lazy"
+                            width="192"
+                            height="192"
+                        />
                     </div>
                   </div>
                   <h3 className="text-xl font-bold mb-1 text-center">Bohdan Stasyuk</h3>
@@ -244,22 +309,64 @@ const ChiSiamo = () => {
 
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 <div className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300">
-                  <img src="/images/brand%20logos/samsung.svg" alt="Samsung" className="max-h-12" />
+                  <img
+                      src="/images/brand%20logos/samsung.svg"
+                      alt="Samsung - Marchio elettrodomestici riparato da Riparazioni 24"
+                      className="max-h-12"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
                 </div>
                 <div className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300">
-                  <img src="/images/brand%20logos/bosch.svg" alt="Bosch" className="max-h-12" />
+                  <img
+                      src="/images/brand%20logos/bosch.svg"
+                      alt="Bosch - Elettrodomestici riparati dai nostri tecnici specializzati"
+                      className="max-h-12"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
                 </div>
                 <div className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300">
-                  <img src="/images/brand%20logos/whirlpool.svg" alt="Whirlpool" className="max-h-12" />
+                  <img
+                      src="/images/brand%20logos/whirlpool.svg"
+                      alt="Whirlpool - Assistenza professionale elettrodomestici"
+                      className="max-h-12"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
                 </div>
                 <div className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300">
-                  <img src="/images/brand%20logos/electrolux.svg" alt="Electrolux" className="max-h-12" />
+                  <img
+                      src="/images/brand%20logos/electrolux.svg"
+                      alt="Electrolux - Riparazione lavatrici, frigoriferi e forni"
+                      className="max-h-12"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
                 </div>
                 <div className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300">
-                  <img src="/images/brand%20logos/miele.svg" alt="Miele" className="max-h-12" />
+                  <img
+                      src="/images/brand%20logos/miele.svg"
+                      alt="Miele - Servizio tecnico qualificato elettrodomestici premium"
+                      className="max-h-12"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
                 </div>
                 <div className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300">
-                  <img src="/images/brand%20logos/siemens.svg" alt="Siemens" className="max-h-12" />
+                  <img
+                      src="/images/brand%20logos/siemens.svg"
+                      alt="Siemens - Riparazione elettrodomestici con ricambi originali"
+                      className="max-h-12"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
                 </div>
               </div>
 

@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, {useState, useEffect} from 'react';
 import { useToast } from '@/components/ui/use-toast';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
+import {CookieManager} from '@/lib/cookies';
 
 const applianceOptions = [
   { value: 'lavatrice', label: 'Lavatrice' },
@@ -12,6 +13,42 @@ const applianceOptions = [
   { value: 'frigorifero', label: 'Frigorifero' },
   { value: 'forno', label: 'Forno' },
   { value: 'asciugatrice', label: 'Asciugatrice' },
+];
+
+const brandOptions = [
+  {value: 'aeg', label: 'AEG'},
+  {value: 'ariston', label: 'Ariston'},
+  {value: 'bauknecht', label: 'Bauknecht'},
+  {value: 'beko', label: 'Beko'},
+  {value: 'bosch', label: 'Bosch'},
+  {value: 'brandt', label: 'Brandt'},
+  {value: 'candy', label: 'Candy'},
+  {value: 'cylinda', label: 'Cylinda'},
+  {value: 'electrolux', label: 'Electrolux'},
+  {value: 'fagor', label: 'Fagor'},
+  {value: 'gorenje', label: 'Gorenje'},
+  {value: 'haier', label: 'Haier'},
+  {value: 'hotpoint', label: 'Hotpoint'},
+  {value: 'hoover', label: 'Hoover'},
+  {value: 'ignis', label: 'Ignis'},
+  {value: 'indesit', label: 'Indesit'},
+  {value: 'kelvinator', label: 'Kelvinator'},
+  {value: 'kenwood', label: 'Kenwood'},
+  {value: 'lg', label: 'LG'},
+  {value: 'liebherr', label: 'Liebherr'},
+  {value: 'miele', label: 'Miele'},
+  {value: 'neff', label: 'Neff'},
+  {value: 'privileg', label: 'Privileg'},
+  {value: 'rex', label: 'Rex'},
+  {value: 'samsung', label: 'Samsung'},
+  {value: 'scholtes', label: 'Scholtes'},
+  {value: 'siemens', label: 'Siemens'},
+  {value: 'smeg', label: 'Smeg'},
+  {value: 'whirlpool', label: 'Whirlpool'},
+  {value: 'zanker', label: 'Zanker'},
+  {value: 'zanussi', label: 'Zanussi'},
+  {value: 'zoppas', label: 'Zoppas'},
+  {value: 'altro', label: 'Altra Marca'},
 ];
 
 const locationOptions = [
@@ -44,6 +81,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
     phone: '',
     email: '',
     applianceType: '',
+    brand: '',
     location: '',
     problem: '',
     privacyAccepted: false,
@@ -119,10 +157,14 @@ const ContactForm: React.FC<ContactFormProps> = ({
         phone: '',
         email: '',
         applianceType: '',
+        brand: '',
         location: '',
         problem: '',
         privacyAccepted: false,
       });
+
+      // Очищаем сохраненные данные после успешной отправки
+      CookieManager.clearFormData('contact');
     } catch (error) {
       toast({
         title: "Errore",
@@ -133,6 +175,26 @@ const ContactForm: React.FC<ContactFormProps> = ({
       setIsSubmitting(false);
     }
   };
+
+  // Загружаем сохраненные данные формы при монтировании компонента
+  useEffect(() => {
+    const savedData = CookieManager.getFormData('contact');
+    if (savedData) {
+      setFormData(prevData => ({
+        ...prevData,
+        ...savedData,
+        privacyAccepted: false // Всегда требуем заново принять соглашение
+      }));
+    }
+  }, []);
+
+  // Сохраняем данные формы при изменении (кроме checkbox)
+  useEffect(() => {
+    const {privacyAccepted, ...dataToSave} = formData;
+    if (formData.fullName || formData.phone || formData.email) {
+      CookieManager.saveFormData('contact', dataToSave);
+    }
+  }, [formData]);
 
   return (
       <div className="bg-white p-8 rounded-lg shadow-lg">
@@ -203,6 +265,25 @@ const ContactForm: React.FC<ContactFormProps> = ({
             </div>
 
             <div className="space-y-2">
+              <Label htmlFor="brand">Marca *</Label>
+              <Select
+                  value={formData.brand}
+                  onValueChange={(value) => handleSelectChange('brand', value)}
+              >
+                <SelectTrigger className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]">
+                  <SelectValue placeholder="Seleziona la marca"/>
+                </SelectTrigger>
+                <SelectContent>
+                  {brandOptions.map(option => (
+                      <SelectItem key={option.value} value={option.value}>
+                        {option.label}
+                      </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
               <Label htmlFor="location">Località *</Label>
               <Select
                   value={formData.location}
@@ -245,7 +326,9 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   className="mt-1"
               />
               <label htmlFor="privacyAccepted" className="text-sm text-gray-600">
-                Ho letto e accetto la <a href="/privacy-policy" className="text-[#1e3a8a] hover:text-[#10b981] underline">Privacy Policy</a> *
+                Ho letto e accetto la <a href="/privacy-policy"
+                                         className="text-[#1e3a8a] hover:text-[#10b981] underline" target="_blank"
+                                         rel="noopener noreferrer">Privacy Policy</a> *
               </label>
             </div>
 

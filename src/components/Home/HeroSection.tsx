@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, ArrowRight, Clock, Shield, Tag, MapPin } from 'lucide-react';
@@ -11,8 +10,11 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src="/images/heroblock.webp"
-          alt="Tecnico che ripara elettrodomestico" 
+          alt="Tecnico specializzato ripara elettrodomestico con strumenti professionali"
           className="w-full h-full object-cover"
+          loading="eager"
+          width="1920"
+          height="1080"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a9a]/40 to-[#1e40af]/35"></div>
       </div>

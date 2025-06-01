@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import { Helmet } from 'react-helmet-async';
+import CookieBanner from '@/components/CookieBanner';
 
 interface MainLayoutProps {
     children: React.ReactNode;
@@ -24,6 +25,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 <title>{title}</title>
                 <meta name="description" content={description} />
                 <meta name="keywords" content={keywords} />
+                <meta name="robots" content="index, follow"/>
+                <meta name="googlebot" content="index, follow"/>
                 <link rel="canonical" href={canonicalUrl} />
 
                 {/* Open Graph / Facebook */}
@@ -32,6 +35,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content="/images/og-image.jpg" />
+                <meta property="og:locale" content="it_IT"/>
+                <meta property="og:site_name" content="Riparazioni 24 Milano"/>
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
@@ -39,12 +44,18 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 <meta property="twitter:title" content={title} />
                 <meta property="twitter:description" content={description} />
                 <meta property="twitter:image" content="/images/og-image.jpg" />
+
+                {/* Additional SEO meta tags */}
+                <meta name="author" content="Riparazioni 24 Milano"/>
+                <meta name="theme-color" content="#1e3a8a"/>
+                <meta name="msapplication-TileColor" content="#1e3a8a"/>
             </Helmet>
 
             <div className="flex flex-col min-h-screen">
                 <Header />
                 <main className="flex-grow">{children}</main>
                 <Footer />
+                <CookieBanner/>
 
                 {/* WhatsApp Button - Fixed positioning adjusted to avoid overlap */}
                 <a
