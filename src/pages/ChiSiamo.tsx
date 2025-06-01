@@ -267,7 +267,7 @@ const ChiSiamo = () => {
                   </div>
                   <h3 className="text-xl font-bold mb-2">Prezzi Trasparenti</h3>
                   <p className="text-gray-600">
-                    Preventivi gratuiti e dettagliati. Costo uscita €40. Nessun costo nascosto o sorprese
+                      Preventivi gratuiti e dettagliati. Costo uscita €30. Nessun costo nascosto o sorprese
                     al momento del pagamento.
                   </p>
                 </div>

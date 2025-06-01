@@ -94,7 +94,7 @@ const TerminiServizio = () => {
                                             <h3 className="text-xl font-semibold text-gray-800 mb-2">4.1 Costo di
                                                 Uscita</h3>
                                             <p className="text-gray-700">
-                                                Il costo di uscita è di <strong>€40,00</strong> e viene applicato per
+                                                Il costo di uscita è di <strong>€30,00</strong> e viene applicato per
                                                 ogni chiamata di servizio,
                                                 anche se la riparazione non viene effettuata per scelta del cliente.
                                             </p>

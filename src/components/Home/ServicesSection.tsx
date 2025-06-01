@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -90,7 +89,7 @@ const ServicesSection = () => {
             I nostri tecnici qualificati intervengono rapidamente a domicilio per risolvere ogni problema.
           </p>
           <p className="text-md text-gray-800 mt-4 font-medium px-4 py-2 bg-[#10b981]/10 inline-block rounded-full">
-            Costo dell'uscita: €40 anche senza riparazione
+              Costo dell'uscita: €30 anche senza riparazione
           </p>
         </div>
 
