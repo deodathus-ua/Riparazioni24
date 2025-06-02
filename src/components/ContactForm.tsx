@@ -133,7 +133,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
     try {
       // Отправка данных на бэкенд
-      const response = await fetch('https://riparazioni24-backend-master-hyswa5.laravel.cloud/api/contact', {
+      const response = await fetch('https://riparazioni24-backend-master-hyswa5.laravel.cloud//api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -337,7 +337,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   className="mt-1"
               />
               <label htmlFor="privacyAccepted" className="text-sm text-gray-600">
-                Ho letto e accetto la <a href="/privacy-policy"
+                Ho letto e accetto la <a href="#/privacy-policy"
                                          className="text-[#1e3a8a] hover:text-[#10b981] underline" target="_blank"
                                          rel="noopener noreferrer">Privacy Policy</a> *
               </label>

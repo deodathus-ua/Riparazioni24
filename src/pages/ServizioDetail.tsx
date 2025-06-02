@@ -391,7 +391,7 @@ const ServizioDetail = () => {
         <div className="container py-16 text-center">
           <h1 className="text-3xl font-bold mb-4">Servizio non trovato</h1>
           <p className="text-lg mb-8">Il servizio richiesto non è disponibile.</p>
-          <a href="/" className="btn-primary">Torna alla Homepage</a>
+            <a href="#/" className="btn-primary">Torna alla Homepage</a>
         </div>
       </MainLayout>
     );

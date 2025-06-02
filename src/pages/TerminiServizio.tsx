@@ -217,7 +217,7 @@ const TerminiServizio = () => {
                                     <h2 className="text-2xl font-bold text-[#1e3a8a] mb-4">9. Protezione dei Dati</h2>
                                     <p className="text-gray-700">
                                         Il trattamento dei dati personali è disciplinato dalla nostra
-                                        <a href="/privacy-policy"
+                                        <a href="#/privacy-policy"
                                            className="text-[#1e3a8a] hover:text-[#10b981] underline" target="_blank"
                                            rel="noopener noreferrer">
                                             Privacy Policy
