@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import {BrowserRouter, Routes, Route, useLocation} from "react-router-dom";
+import {HashRouter, Routes, Route, useLocation} from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import {useEffect} from 'react';
 import Index from "./pages/Index";
@@ -33,7 +33,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+          <HashRouter>
             <ScrollToTop/>
           <Routes>
             <Route path="/" element={<Index />} />
@@ -45,7 +45,7 @@ const App = () => (
               <Route path="/cookie-policy" element={<CookiePolicy/>}/>
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </TooltipProvider>
     </HelmetProvider>
   </QueryClientProvider>
