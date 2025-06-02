@@ -16,43 +16,6 @@ const Contatti = () => {
           <meta name="keywords" content="contatti riparazione elettrodomestici Milano, telefono assistenza elettrodomestici, riparatore elettrodomestici Milano" />
         </Helmet>
 
-          {/* Breadcrumb Navigation */}
-          <nav className="bg-gray-50 py-4" aria-label="Breadcrumb">
-              <div className="container">
-                  <ol className="flex items-center space-x-2 text-sm">
-                      <li>
-                          <a href="/" className="text-blue-600 hover:text-blue-800">Home</a>
-                      </li>
-                      <li className="text-gray-500">/</li>
-                      <li className="text-gray-700">Contatti</li>
-                  </ol>
-              </div>
-          </nav>
-
-          {/* Breadcrumb Schema */}
-          <script type="application/ld+json" dangerouslySetInnerHTML={{
-              __html: `
-          {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://riparazioni24.eu/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Contatti",
-                "item": "https://riparazioni24.eu/contatti"
-              }
-            ]
-          }
-        `
-          }}/>
-
           {/* Hero Section */}
         <section className="bg-gradient-to-r from-brand-blue to-blue-800 text-white py-16">
           <div className="container">

@@ -14,7 +14,7 @@ interface MainLayoutProps {
 const MainLayout: React.FC<MainLayoutProps> = ({
                                                    children,
                                                    title = 'Riparazione Elettrodomestici Milano | Assistenza Rapida e Professionale',
-                                                   description = 'Servizio di riparazione elettrodomestici a Milano e provincia. Interventi rapidi su lavatrici, frigoriferi, lavastoviglie e forni. Chiamaci ora!',
+                                                   description = 'Servizio di riparazione elettrodomestici a Milano e provincia. Interventi rapidi su lavatrici, asciugatrici, lavastoviglie, frigoriferi, congelatori, piani cottura e forni. Chiamaci ora!',
                                                    keywords = 'riparazione elettrodomestici Milano, assistenza lavatrice Milano, riparazione frigorifero Milano, tecnico elettrodomestici Milano'
                                                }) => {
     const canonicalUrl = window.location.href;

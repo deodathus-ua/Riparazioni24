@@ -13,7 +13,9 @@ const Footer = () => {
             <div>
               <h3 className="text-xl font-bold mb-4 text-white">ElettroAssistenza Milano</h3>
               <p className="text-gray-300 mb-4">
-                Servizio professionale di riparazione elettrodomestici a Milano e provincia. Interventi rapidi, garanzia sui ricambi e prezzi trasparenti.
+                  Servizio professionale di riparazione elettrodomestici a Milano e provincia. Specializzati in
+                  lavatrici, asciugatrici, lavastoviglie, frigoriferi, congelatori, piani cottura e forni. Interventi
+                  rapidi, garanzia sui ricambi e prezzi trasparenti.
               </p>
               <div className="flex space-x-4">
                 <a href="https://www.instagram.com/riparazioni24?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" aria-label="Instagram" className="bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 text-white p-3 rounded-full hover:opacity-90 transition-opacity">
@@ -42,17 +44,27 @@ const Footer = () => {
                   <Link to="/servizi/lavatrice" className="text-gray-300 hover:text-[#10b981] transition-colors">Riparazione Lavatrici</Link>
                 </li>
                 <li>
+                    <Link to="/servizi/asciugatrice" className="text-gray-300 hover:text-[#10b981] transition-colors">Riparazione
+                        Asciugatrici</Link>
+                </li>
+                  <li>
                   <Link to="/servizi/lavastoviglie" className="text-gray-300 hover:text-[#10b981] transition-colors">Riparazione Lavastoviglie</Link>
                 </li>
                 <li>
                   <Link to="/servizi/frigorifero" className="text-gray-300 hover:text-[#10b981] transition-colors">Riparazione Frigoriferi</Link>
                 </li>
                 <li>
-                  <Link to="/servizi/forno" className="text-gray-300 hover:text-[#10b981] transition-colors">Riparazione Forni</Link>
+                    <Link to="/servizi/congelatore" className="text-gray-300 hover:text-[#10b981] transition-colors">Riparazione
+                        Congelatori</Link>
                 </li>
                 <li>
-                  <Link to="/servizi/piccoli-elettrodomestici" className="text-gray-300 hover:text-[#10b981] transition-colors">Altri Elettrodomestici</Link>
+                    <Link to="/servizi/piano-cottura" className="text-gray-300 hover:text-[#10b981] transition-colors">Riparazione
+                        Piani Cottura</Link>
                 </li>
+                  <li>
+                      <Link to="/servizi/forno" className="text-gray-300 hover:text-[#10b981] transition-colors">Riparazione
+                          Forni</Link>
+                  </li>
               </ul>
             </div>
 
@@ -120,7 +132,8 @@ const Footer = () => {
           {/* Structured data for SEO - hidden visually but available for search engines */}
           <div className="schema-org-markup" itemScope itemType="https://schema.org/LocalBusiness">
             <meta itemProp="name" content="Riparazioni24 Milano" />
-            <meta itemProp="description" content="Servizio professionale di riparazione elettrodomestici a Milano e provincia. Interventi rapidi, assistenza qualificata e prezzi trasparenti." />
+              <meta itemProp="description"
+                    content="Servizio professionale di riparazione elettrodomestici a Milano e provincia. Specializzati in lavatrici, asciugatrici, lavastoviglie, frigoriferi, congelatori, piani cottura e forni. Interventi rapidi, garanzia sui ricambi e prezzi trasparenti."/>
             <link itemProp="url" href="https://www.elettroassistenza-milano.it" />
             <meta itemProp="telephone" content="+393205509145" />
             <meta itemProp="email" content="info@riparazioni24.eu

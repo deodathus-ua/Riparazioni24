@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import {CheckCircle, ArrowRight, Wind} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface ServiceDetailProps {
@@ -186,6 +186,13 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({
                     </Link>
                   </li>
                   <li>
+                      <Link to="/servizi/asciugatrice"
+                            className="flex items-center text-gray-700 hover:text-brand-blue">
+                          <Wind size={16} className="mr-2"/>
+                          <span>Riparazione Asciugatrici</span>
+                      </Link>
+                  </li>
+                    <li>
                     <Link to="/servizi/lavastoviglie" className="flex items-center text-gray-700 hover:text-brand-blue">
                       <ArrowRight size={16} className="mr-2" />
                       <span>Riparazione Lavastoviglie</span>
@@ -198,17 +205,24 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({
                     </Link>
                   </li>
                   <li>
-                    <Link to="/servizi/forno" className="flex items-center text-gray-700 hover:text-brand-blue">
+                      <Link to="/servizi/congelatore" className="flex items-center text-gray-700 hover:text-brand-blue">
                       <ArrowRight size={16} className="mr-2" />
-                      <span>Riparazione Forni</span>
+                        <span>Riparazione Congelatori</span>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/servizi/piccoli-elettrodomestici" className="flex items-center text-gray-700 hover:text-brand-blue">
-                      <ArrowRight size={16} className="mr-2" />
-                      <span>Altri Elettrodomestici</span>
+                      <Link to="/servizi/piano-cottura"
+                            className="flex items-center text-gray-700 hover:text-brand-blue">
+                          <ArrowRight size={16} className="mr-2"/>
+                          <span>Riparazione Piani Cottura</span>
                     </Link>
                   </li>
+                    <li>
+                        <Link to="/servizi/forno" className="flex items-center text-gray-700 hover:text-brand-blue">
+                            <ArrowRight size={16} className="mr-2"/>
+                            <span>Riparazione Forni</span>
+                        </Link>
+                    </li>
                 </ul>
               </div>
             </div>

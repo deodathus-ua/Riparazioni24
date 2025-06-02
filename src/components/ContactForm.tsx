@@ -7,12 +7,15 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Label } from '@/components/ui/label';
 import {CookieManager} from '@/lib/cookies';
 
-const applianceOptions = [
+const serviceOptions = [
   { value: 'lavatrice', label: 'Lavatrice' },
+  {value: 'asciugatrice', label: 'Asciugatrice'},
   { value: 'lavastoviglie', label: 'Lavastoviglie' },
   { value: 'frigorifero', label: 'Frigorifero' },
+  {value: 'congelatore', label: 'Congelatore'},
+  {value: 'piano-cottura', label: 'Piano Cottura'},
   { value: 'forno', label: 'Forno' },
-  { value: 'asciugatrice', label: 'Asciugatrice' },
+  {value: 'altro', label: 'Altro'}
 ];
 
 const brandOptions = [
@@ -130,7 +133,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
     try {
       // Отправка данных на бэкенд
-      const response = await fetch('https://riparazioni24-backend-master-hyswa5.laravel.cloud/api/contact', {
+      const response = await fetch('https://gains-up-til-malawi.trycloudflare.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -138,7 +141,15 @@ const ContactForm: React.FC<ContactFormProps> = ({
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
+      let data;
+      const contentType = response.headers.get('content-type');
+
+      if (contentType && contentType.includes('application/json')) {
+        data = await response.json();
+      } else {
+        // If response is not JSON, treat as error
+        throw new Error('Il servizio è temporaneamente non disponibile');
+      }
 
       if (!response.ok) {
         throw new Error(data.message || 'Errore durante l\'invio.');
@@ -168,7 +179,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
     } catch (error) {
       toast({
         title: "Errore",
-        description: error.message || "Si è verificato un errore. Per favore riprova più tardi o contattaci telefonicamente.",
+        description: error instanceof Error ? error.message : "Si è verificato un errore. Per favore riprova più tardi o contattaci telefonicamente.",
         variant: "destructive",
       });
     } finally {
@@ -255,7 +266,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   <SelectValue placeholder="Seleziona l'elettrodomestico" />
                 </SelectTrigger>
                 <SelectContent>
-                  {applianceOptions.map(option => (
+                  {serviceOptions.map(option => (
                       <SelectItem key={option.value} value={option.value}>
                         {option.label}
                       </SelectItem>

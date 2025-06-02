@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Calendar, Menu, X } from 'lucide-react';
@@ -28,10 +27,15 @@ const Header = () => {
               <span className="font-medium hover:text-[#1e3a8a] transition-colors cursor-pointer">Servizi</span>
               <div className="absolute left-0 mt-2 w-60 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <Link to="/servizi/lavatrice" className="block px-4 py-2 hover:bg-gray-100">Riparazione Lavatrici</Link>
+                  <Link to="/servizi/asciugatrice" className="block px-4 py-2 hover:bg-gray-100">Riparazione
+                      Asciugatrici</Link>
                 <Link to="/servizi/lavastoviglie" className="block px-4 py-2 hover:bg-gray-100">Riparazione Lavastoviglie</Link>
                 <Link to="/servizi/frigorifero" className="block px-4 py-2 hover:bg-gray-100">Riparazione Frigoriferi</Link>
+                  <Link to="/servizi/congelatore" className="block px-4 py-2 hover:bg-gray-100">Riparazione
+                      Congelatori</Link>
+                  <Link to="/servizi/piano-cottura" className="block px-4 py-2 hover:bg-gray-100">Riparazione Piani
+                      Cottura</Link>
                 <Link to="/servizi/forno" className="block px-4 py-2 hover:bg-gray-100">Riparazione Forni</Link>
-                <Link to="/servizi/asciugatrice" className="block px-4 py-2 hover:bg-gray-100">Riparazione Asciugatrici</Link>
               </div>
             </div>
             <Link to="/chi-siamo" className="font-medium hover:text-[#1e3a8a] transition-colors">Chi Siamo</Link>
@@ -69,8 +73,13 @@ const Header = () => {
                   <Link to="/servizi/lavatrice" className="text-sm hover:text-[#1e3a8a] transition-colors" onClick={toggleMenu}>Riparazione Lavatrici</Link>
                   <Link to="/servizi/lavastoviglie" className="text-sm hover:text-[#1e3a8a] transition-colors" onClick={toggleMenu}>Riparazione Lavastoviglie</Link>
                   <Link to="/servizi/frigorifero" className="text-sm hover:text-[#1e3a8a] transition-colors" onClick={toggleMenu}>Riparazione Frigoriferi</Link>
-                  <Link to="/servizi/forno" className="text-sm hover:text-[#1e3a8a] transition-colors" onClick={toggleMenu}>Riparazione Forni</Link>
                   <Link to="/servizi/asciugatrice" className="text-sm hover:text-[#1e3a8a] transition-colors" onClick={toggleMenu}>Riparazione Asciugatrici</Link>
+                    <Link to="/servizi/congelatore" className="text-sm hover:text-[#1e3a8a] transition-colors"
+                          onClick={toggleMenu}>Riparazione Congelatori</Link>
+                    <Link to="/servizi/piano-cottura" className="text-sm hover:text-[#1e3a8a] transition-colors"
+                          onClick={toggleMenu}>Riparazione Piani Cottura</Link>
+                    <Link to="/servizi/forno" className="text-sm hover:text-[#1e3a8a] transition-colors"
+                          onClick={toggleMenu}>Riparazione Forni</Link>
                 </div>
               </div>
               <Link to="/chi-siamo" className="font-medium py-2 hover:text-[#1e3a8a] transition-colors" onClick={toggleMenu}>Chi Siamo</Link>

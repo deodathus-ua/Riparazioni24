@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -42,7 +41,7 @@ const servicesData = {
       }
     ],
     brands: [
-      "Bosch", "Siemens", "Samsung", "LG", "Whirlpool", "Candy", "Electrolux", "AEG", "Indesit", "Ariston", "Smeg", "Hotpoint", "Miele", "Beko", "Haier"
+        "Samsung", "Grundig", "Whirlpool", "Electrolux", "Hisense", "Siemens", "Indesit", "Candy", "Ariston", "Hoover", "Beko", "Zanussi", "AEG", "Bauknecht", "Ignis", "Hotpoint", "Smeg", "Haier", "Bosch", "Miele", "LG"
     ],
     faqItems: [
       {
@@ -95,7 +94,7 @@ const servicesData = {
       }
     ],
     brands: [
-      "Bosch", "Siemens", "Samsung", "LG", "Whirlpool", "Candy", "Electrolux", "AEG", "Indesit", "Ariston", "Smeg", "Hotpoint", "Miele", "Beko", "Haier"
+        "Samsung", "Grundig", "Whirlpool", "Electrolux", "Hisense", "Siemens", "Indesit", "Candy", "Ariston", "Hoover", "Beko", "Zanussi", "AEG", "Bauknecht", "Ignis", "Hotpoint", "Smeg", "Haier", "Bosch", "Miele", "LG"
     ],
     faqItems: [
       {
@@ -148,7 +147,7 @@ const servicesData = {
       }
     ],
     brands: [
-      "Samsung", "LG", "Whirlpool", "Bosch", "Siemens", "Electrolux", "Indesit", "Ariston", "Candy", "Smeg", "Liebherr", "Haier", "Hisense", "Beko", "AEG"
+        "Samsung", "Grundig", "Whirlpool", "Electrolux", "Hisense", "Siemens", "Indesit", "Candy", "Ariston", "Hoover", "Beko", "Zanussi", "AEG", "Bauknecht", "Ignis", "Hotpoint", "Smeg", "Haier", "Bosch", "Miele", "LG"
     ],
     faqItems: [
       {
@@ -201,7 +200,7 @@ const servicesData = {
       }
     ],
     brands: [
-      "Bosch", "Siemens", "Samsung", "Whirlpool", "Candy", "Electrolux", "AEG", "Indesit", "Ariston", "Smeg", "Hotpoint", "Miele", "Beko", "Franke", "Neff"
+        "Samsung", "Grundig", "Whirlpool", "Electrolux", "Hisense", "Siemens", "Indesit", "Candy", "Ariston", "Hoover", "Beko", "Zanussi", "AEG", "Bauknecht", "Ignis", "Hotpoint", "Smeg", "Haier", "Bosch", "Miele", "LG"
     ],
     faqItems: [
       {
@@ -254,7 +253,7 @@ const servicesData = {
       }
     ],
     brands: [
-      "Bosch", "Siemens", "Samsung", "LG", "Whirlpool", "Candy", "Electrolux", "AEG", "Indesit", "Ariston", "Smeg", "Hotpoint", "Miele", "Beko", "Haier"
+        "Samsung", "Grundig", "Whirlpool", "Electrolux", "Hisense", "Siemens", "Indesit", "Candy", "Ariston", "Hoover", "Beko", "Zanussi", "AEG", "Bauknecht", "Ignis", "Hotpoint", "Smeg", "Haier", "Bosch", "Miele", "LG"
     ],
     faqItems: [
       {
@@ -269,6 +268,112 @@ const servicesData = {
         question: "Quanto tempo richiede una riparazione di asciugatrice?",
         answer: "La maggior parte delle riparazioni viene completata in un singolo intervento che dura tra 1 e 2 ore. Per guasti più complessi o che richiedono ordinazione di ricambi specifici potrebbe essere necessario un secondo appuntamento."
       }
+    ]
+  },
+    "piano-cottura": {
+    title: "Riparazione Piani Cottura a Milano",
+      description: "Assistenza e riparazione professionale di piani cottura a gas, elettrici e a induzione a Milano. Intervento tecnico qualificato su tutti i modelli e marche.",
+      keywords: "riparazione piani cottura Milano, assistenza piano cottura Milano, tecnico piani cottura, riparare piano cottura",
+      imageUrl: "/images/pianocottura.webp",
+      bulletPoints: [
+          "Intervento entro 24 ore in tutta Milano e provincia",
+          "Tecnici qualificati per piani cottura a gas, elettrici e a induzione",
+          "Preventivi gratuiti e senza impegno",
+          "Riparazione direttamente a domicilio",
+          "Garanzia di 12 mesi su ricambi e manodopera",
+          "Certificazioni per interventi in sicurezza su impianti a gas"
+    ],
+      commonProblems: [
+          {
+              title: "I fuochi non si accendono",
+              description: "Potrebbe essere un problema alle candelette di accensione, al sistema elettrico o alle valvole del gas. I nostri tecnici sono qualificati per intervenire su tutti questi componenti."
+          },
+          {
+              title: "Le piastre elettriche non scaldano",
+              description: "Spesso causato da resistenze bruciate, termostati difettosi o problemi ai circuiti elettrici. Interveniamo per ripristinare la corretta funzionalità di riscaldamento."
+          },
+          {
+              title: "Il piano a induzione non funziona",
+              description: "Potrebbe dipendere dalla scheda elettronica, dai sensori o dal sistema di controllo touch. Ripariamo tutti i componenti elettronici dei moderni piani a induzione."
+          },
+          {
+              title: "Perdite di gas dal piano cottura",
+              description: "Problema serio che richiede intervento immediato. I nostri tecnici certificati possono individuare e riparare qualsiasi perdita nel sistema gas in totale sicurezza."
+          },
+          {
+              title: "I comandi del piano cottura non rispondono",
+              description: "Generalmente causato da problemi ai selettori, alla scheda elettronica o ai sensori touch. Il nostro intervento ripristina il pieno controllo dell'elettrodomestico."
+          }
+    ],
+      brands: [
+          "Samsung", "Grundig", "Whirlpool", "Electrolux", "Hisense", "Siemens", "Indesit", "Candy", "Ariston", "Hoover", "Beko", "Zanussi", "AEG", "Bauknecht", "Ignis", "Hotpoint", "Smeg", "Haier", "Bosch", "Miele", "LG"
+    ],
+      faqItems: [
+          {
+              question: "È pericoloso usare un piano cottura che non funziona correttamente?",
+              answer: "Sì, soprattutto per i piani cottura a gas. Problemi all'impianto possono causare perdite di gas pericolose. Anche nei piani elettrici e a induzione, malfunzionamenti possono portare a rischi elettrici o surriscaldamenti."
+          },
+          {
+              question: "Quanto costa riparare un piano cottura?",
+              answer: "Il costo dipende dal tipo di guasto e dal modello. Forniamo sempre un preventivo gratuito prima di procedere. In media, una riparazione standard può variare dai 60€ ai 160€, inclusi manodopera e ricambi."
+          },
+          {
+              question: "È possibile riparare un piano cottura incassato senza rimuoverlo?",
+              answer: "Nella maggior parte dei casi, i nostri tecnici sono in grado di riparare piani cottura da incasso senza estrarli completamente, grazie ad attrezzature specializzate e tecniche di intervento specifiche."
+          }
+    ]
+  },
+    congelatore: {
+    title: "Riparazione Congelatori a Milano",
+      description: "Assistenza e riparazione professionale di congelatori verticali e orizzontali a Milano. Intervento rapido su tutti i modelli e marche.",
+      keywords: "riparazione congelatori Milano, assistenza congelatore Milano, tecnico congelatori, riparare congelatore",
+      imageUrl: "/images/frigo_2.webp",
+      bulletPoints: [
+          "Intervento rapido entro 24 ore in tutta Milano e provincia",
+          "Tecnici certificati F-GAS per la gestione dei gas refrigeranti",
+          "Preventivi gratuiti e senza impegno",
+          "Riparazione direttamente a domicilio",
+          "Garanzia di 12 mesi su ricambi e manodopera",
+          "Assistenza su congelatori domestici e commerciali di tutte le marche"
+    ],
+      commonProblems: [
+          {
+              title: "Il congelatore non congela abbastanza",
+              description: "Può essere causato da perdite di gas refrigerante, problemi al compressore o al termostato. I nostri tecnici certificati F-GAS possono intervenire su tutti questi componenti."
+          },
+          {
+              title: "Il congelatore fa rumore eccessivo",
+              description: "Potrebbe indicare problemi al compressore, al ventilatore o alla serpentina. Diagnostichiamo la causa e procediamo con la riparazione appropriata per un funzionamento silenzioso."
+          },
+          {
+              title: "Si forma troppo ghiaccio sulle pareti",
+              description: "Le cause più comuni sono problemi alla guarnizione della porta, al termostato o al sistema di sbrinamento automatico. Interveniamo per ripristinare il corretto funzionamento."
+          },
+          {
+              title: "Il congelatore perde acqua",
+              description: "Spesso causato da ostruzioni nel sistema di drenaggio o problemi allo sbrinamento. Il nostro intervento risolve questi problemi prevenendo danni all'abitazione."
+          },
+          {
+              title: "Il congelatore non si accende",
+              description: "Potrebbe trattarsi di un problema elettrico, al termostato o alla scheda elettronica. I nostri tecnici sono in grado di diagnosticare e riparare guasti a questi componenti."
+          }
+    ],
+      brands: [
+          "Samsung", "Grundig", "Whirlpool", "Electrolux", "Hisense", "Siemens", "Indesit", "Candy", "Ariston", "Hoover", "Beko", "Zanussi", "AEG", "Bauknecht", "Ignis", "Hotpoint", "Smeg", "Haier", "Bosch", "Miele", "LG"
+    ],
+      faqItems: [
+          {
+              question: "Quanto costa riparare un congelatore?",
+              answer: "Il costo dipende dal tipo di guasto. Forniamo sempre un preventivo gratuito prima di procedere. In media, una riparazione standard può variare dai 80€ ai 250€, inclusi manodopera e ricambi."
+          },
+          {
+              question: "È possibile riparare un congelatore che perde gas?",
+              answer: "Sì, i nostri tecnici sono certificati F-GAS e possono individuare la perdita, ripararla e ricaricare il gas refrigerante secondo le normative vigenti per la protezione ambientale."
+          },
+          {
+              question: "Quando conviene riparare un congelatore invece di sostituirlo?",
+              answer: "Di solito conviene riparare se il congelatore ha meno di 8-10 anni, se il costo della riparazione è inferiore al 50% del prezzo di un nuovo elettrodomestico, e se i pezzi di ricambio sono facilmente reperibili."
+          }
     ]
   }
 };

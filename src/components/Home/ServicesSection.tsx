@@ -17,6 +17,20 @@ const services = [
     ctaText: 'Ripara la tua lavatrice oggi!'
   },
   {
+      id: 'asciugatrice',
+      title: 'Riparazione Asciugatrici',
+      description: 'Risolviamo problemi alle asciugatrici come mancato riscaldamento, rumori anomali o errori del sistema.',
+      icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-[#1e3a8a]" fill="none" viewBox="0 0 24 24"
+               stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+                    d="M5 3v18h14V3H5zm3 3h8m-8 3h8m-4 7a4 4 0 100-8 4 4 0 000 8z"/>
+          </svg>
+      ),
+      image: '/images/asciugatrice.webp',
+      ctaText: 'Asciugatrice guasta? Risolviamo subito!'
+  },
+    {
     id: 'lavastoviglie',
     title: 'Riparazione Lavastoviglie',
     description: 'Risolviamo guasti come scarso lavaggio, perdite d\'acqua o problemi elettronici dei principali marchi.',
@@ -41,33 +55,21 @@ const services = [
     ctaText: 'Frigorifero che non raffredda? Contattaci!'
   },
   {
-    id: 'forno',
-    title: 'Riparazione Forni',
-    description: 'Ripariamo forni elettrici e a gas con problemi di temperatura, resistenze o centraline elettroniche.',
+      id: 'congelatore',
+      title: 'Riparazione Congelatori',
+      description: 'Ripariamo congelatori verticali e orizzontali con problemi di raffreddamento o malfunzionamenti.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-[#1e3a8a]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 14h8M8 10h8" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm0 6h14m0 6H5M9 3v18"/>
       </svg>
     ),
-    image: '/images/forno.webp',
-    ctaText: 'Problemi con il forno? Riparazione veloce!'
-  },
-  {
-    id: 'asciugatrice',
-    title: 'Riparazione Asciugatrici',
-    description: 'Risolviamo problemi alle asciugatrici come mancato riscaldamento, rumori anomali o errori del sistema.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-[#1e3a8a]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 3h8m-8 3h8m-4 7a4 4 0 100-8 4 4 0 000 8z" />
-      </svg>
-    ),
-    image: '/images/asciugatrice.webp',
-    ctaText: 'Asciugatrice guasta? Risolviamo subito!'
+      image: '/images/frigo_2.webp',
+      ctaText: 'Congelatore che non congela? Chiamaci!'
   },
   {
     id: 'piano-cottura',
     title: 'Riparazione Piani Cottura',
-    description: 'Ripariamo piani cottura a gas ed elettrici con problemi di accensione, bruciatori o circuiti elettronici.',
+      description: 'Ripariamo piani cottura a gas, elettrici e a induzione con problemi di accensione o circuiti.',
     icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-[#1e3a8a]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm2 4h10M7 10h2m6 0h2m-5 4a2 2 0 100-4 2 2 0 000 4z" />
@@ -75,6 +77,19 @@ const services = [
     ),
     image: '/images/pianocottura.webp',
     ctaText: 'Piano cottura non funziona? Contattaci!'
+  },
+    {
+        id: 'forno',
+        title: 'Riparazione Forni',
+        description: 'Ripariamo forni elettrici e a gas con problemi di temperatura, resistenze o centraline elettroniche.',
+        icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-[#1e3a8a]" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 14h8M8 10h8"/>
+            </svg>
+        ),
+        image: '/images/forno.webp',
+        ctaText: 'Problemi con il forno? Riparazione veloce!'
   }
 ];
 

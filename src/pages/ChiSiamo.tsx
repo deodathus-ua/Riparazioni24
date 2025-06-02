@@ -18,43 +18,6 @@ const ChiSiamo = () => {
           <meta name="keywords" content="riparazione elettrodomestici Milano, chi siamo, tecnici elettrodomestici Milano, assistenza elettrodomestici" />
         </Helmet>
 
-          {/* Breadcrumb Navigation */}
-          <nav className="bg-gray-50 py-4" aria-label="Breadcrumb">
-              <div className="container">
-                  <ol className="flex items-center space-x-2 text-sm">
-                      <li>
-                          <a href="/" className="text-blue-600 hover:text-blue-800">Home</a>
-                      </li>
-                      <li className="text-gray-500">/</li>
-                      <li className="text-gray-700">Chi Siamo</li>
-                  </ol>
-              </div>
-          </nav>
-
-          {/* Breadcrumb Schema */}
-          <script type="application/ld+json" dangerouslySetInnerHTML={{
-              __html: `
-          {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://riparazioni24.eu/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Chi Siamo",
-                "item": "https://riparazioni24.eu/chi-siamo"
-              }
-            ]
-          }
-        `
-          }}/>
-
           {/* Hero Section */}
         <section className="bg-gradient-to-r from-[#1e3a8a] to-blue-800 text-white py-16 animate-fade-in">
           <div className="container">
@@ -117,7 +80,7 @@ const ChiSiamo = () => {
               <div className="space-y-6">
                 <h2 className="text-3xl font-bold">La Nostra Storia</h2>
                 <p className="text-lg text-gray-600">
-                  Fondata nel 2017, Riparazioni 24 è nata dalla visione dei fratelli Yaroslav e Bohdan Stasyuk,
+                  Fondata nel 2015, Riparazioni 24 è nata dalla visione dei fratelli Yaroslav e Bohdan Stasyuk,
                   che hanno unito la loro passione per la tecnologia e il servizio clienti per creare un'azienda leader
                   nella riparazione di elettrodomestici a Milano. La nostra missione è garantire soluzioni rapide e affidabili
                   per ogni esigenza.
@@ -275,7 +238,8 @@ const ChiSiamo = () => {
                 <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <div className="text-[#10b981] mb-4">
                     <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                            d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold mb-2">Ricambi Originali</h3>
@@ -307,66 +271,248 @@ const ChiSiamo = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                <div className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                {/* Row 1 - 6 logos */}
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
                   <img
                       src="/images/brand%20logos/samsung.svg"
                       alt="Samsung - Marchio elettrodomestici riparato da Riparazioni 24"
-                      className="max-h-12"
+                      className="max-h-12 max-w-full object-contain"
                       loading="lazy"
                       width="120"
                       height="48"
                   />
                 </div>
-                <div className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300">
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
                   <img
-                      src="/images/brand%20logos/bosch.svg"
-                      alt="Bosch - Elettrodomestici riparati dai nostri tecnici specializzati"
-                      className="max-h-12"
+                      src="/images/brand%20logos/grundig.svg"
+                      alt="Grundig - Riparazione elettrodomestici tedeschi di qualità"
+                      className="max-h-12 max-w-full object-contain"
                       loading="lazy"
                       width="120"
                       height="48"
                   />
                 </div>
-                <div className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300">
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
                   <img
                       src="/images/brand%20logos/whirlpool.svg"
                       alt="Whirlpool - Assistenza professionale elettrodomestici"
-                      className="max-h-12"
+                      className="max-h-12 max-w-full object-contain"
                       loading="lazy"
                       width="120"
                       height="48"
                   />
                 </div>
-                <div className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300">
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
                   <img
                       src="/images/brand%20logos/electrolux.svg"
                       alt="Electrolux - Riparazione lavatrici, frigoriferi e forni"
-                      className="max-h-12"
+                      className="max-h-12 max-w-full object-contain"
                       loading="lazy"
                       width="120"
                       height="48"
                   />
                 </div>
-                <div className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300">
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
                   <img
-                      src="/images/brand%20logos/miele.svg"
-                      alt="Miele - Servizio tecnico qualificato elettrodomestici premium"
-                      className="max-h-12"
+                      src="/images/brand%20logos/hisense.svg"
+                      alt="Hisense - Assistenza elettrodomestici moderni"
+                      className="max-h-12 max-w-full object-contain"
                       loading="lazy"
                       width="120"
                       height="48"
                   />
                 </div>
-                <div className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300">
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
                   <img
                       src="/images/brand%20logos/siemens.svg"
                       alt="Siemens - Riparazione elettrodomestici con ricambi originali"
-                      className="max-h-12"
+                      className="max-h-12 max-w-full object-contain"
                       loading="lazy"
                       width="120"
                       height="48"
                   />
+                </div>
+
+                {/* Row 2 - 6 logos */}
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
+                  <img
+                      src="/images/brand%20logos/indesit.svg"
+                      alt="Indesit - Riparazione elettrodomestici marchio italiano"
+                      className="max-h-18 max-w-full object-contain"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
+                </div>
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
+                  <img
+                      src="/images/brand%20logos/candy.svg"
+                      alt="Candy - Assistenza tecnica elettrodomestici italiani"
+                      className="max-h-12 max-w-full object-contain"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
+                </div>
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
+                  <img
+                      src="/images/brand%20logos/ariston.svg"
+                      alt="Ariston - Riparazione elettrodomestici"
+                      className="max-h-18 max-w-full object-contain"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
+                </div>
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
+                  <img
+                      src="/images/brand%20logos/hoover.svg"
+                      alt="Hoover - Assistenza elettrodomestici per la pulizia domestica"
+                      className="max-h-18 max-w-full object-contain"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
+                </div>
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
+                  <img
+                      src="/images/brand%20logos/beko.svg"
+                      alt="Beko - Riparazione elettrodomestici moderni"
+                      className="max-h-12 max-w-full object-contain"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
+                </div>
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
+                  <img
+                      src="/images/brand%20logos/zanussi.svg"
+                      alt="Zanussi - Assistenza professionale elettrodomestici"
+                      className="max-h-18 max-w-full object-contain"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
+                </div>
+
+                {/* Row 3 - 6 logos */}
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
+                  <img
+                      src="/images/brand%20logos/aeg.svg"
+                      alt="AEG - Riparazione elettrodomestici premium tedeschi"
+                      className="max-h-10 max-w-full object-contain"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
+                </div>
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
+                  <img
+                      src="/images/brand%20logos/bauknecht.svg"
+                      alt="Bauknecht - Assistenza tecnica elettrodomestici Whirlpool"
+                      className="max-h-12 max-w-full object-contain"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
+                </div>
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
+                  <img
+                      src="/images/brand%20logos/ignis.svg"
+                      alt="Ignis - Riparazione elettrodomestici marchio italiano"
+                      className="max-h-18 max-w-full object-contain"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
+                </div>
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
+                  <img
+                      src="/images/brand%20logos/hotpoint.svg"
+                      alt="Hotpoint - Servizio tecnico elettrodomestici affidabili"
+                      className="max-h-18 max-w-full object-contain"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
+                </div>
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
+                  <img
+                      src="/images/brand%20logos/smeg.svg"
+                      alt="Smeg - Riparazione elettrodomestici design italiano"
+                      className="max-h-18 max-w-full object-contain"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
+                </div>
+                <div
+                    className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
+                  <img
+                      src="/images/brand%20logos/haier.svg"
+                      alt="Haier - Assistenza elettrodomestici innovativi"
+                      className="max-h-12 max-w-full object-contain"
+                      loading="lazy"
+                      width="120"
+                      height="48"
+                  />
+                </div>
+
+                {/* Row 4 - 3 logos centered */}
+                <div className="col-span-2 md:col-span-3 lg:col-span-6 flex justify-center">
+                  <div className="grid grid-cols-3 gap-6 w-full">
+                    <div
+                        className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
+                      <img
+                          src="/images/brand%20logos/bosch.svg"
+                          alt="Bosch - Elettrodomestici riparati dai nostri tecnici specializzati"
+                          className="max-h-18 max-w-full object-contain"
+                          loading="lazy"
+                          width="120"
+                          height="48"
+                      />
+                    </div>
+                    <div
+                        className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
+                      <img
+                          src="/images/brand%20logos/miele.svg"
+                          alt="Miele - Servizio tecnico qualificato elettrodomestici premium"
+                          className="max-h-18 max-w-full object-contain"
+                          loading="lazy"
+                          width="120"
+                          height="48"
+                      />
+                    </div>
+                    <div
+                        className="bg-white p-4 rounded border border-gray-200 flex items-center justify-center h-24 hover:scale-105 transition-transform duration-300 overflow-hidden">
+                      <img
+                          src="/images/brand%20logos/lg.svg"
+                          alt="LG - Servizio tecnico elettrodomestici di qualità"
+                          className="max-h-18 max-w-full object-contain"
+                          loading="lazy"
+                          width="120"
+                          height="48"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
 

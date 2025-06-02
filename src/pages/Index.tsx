@@ -13,7 +13,8 @@ const Index = () => {
     <MainLayout>
       <Helmet>
         <title>Riparazioni 24 Milano | Riparazione Elettrodomestici Rapida e Garantita</title>
-        <meta name="description" content="Servizio di riparazione elettrodomestici a Milano e provincia. Interventi rapidi in giornata su lavatrici, frigoriferi, lavastoviglie e forni. Chiamaci ora!" />
+          <meta name="description"
+                content="Servizio di riparazione elettrodomestici a Milano e provincia. Interventi rapidi in giornata su lavatrici, asciugatrici, lavastoviglie, frigoriferi, congelatori, piani cottura e forni. Chiamaci ora!"/>
         <meta name="keywords" content="riparazione elettrodomestici Milano, assistenza lavatrice Milano, riparazione frigorifero Milano, tecnico elettrodomestici Milano, riparazioni 24" />
       </Helmet>
       
@@ -33,7 +34,7 @@ const Index = () => {
           "image": "/images/logo.png",
           "telephone": "+393205509145",
           "email": "info@riparazioni24.eu",
-          "description": "Riparazione elettrodomestici rapida e garantita a domicilio in tutta Milano e provincia. Interventi su lavatrici, frigoriferi, lavastoviglie e forni.",
+          "description": "Riparazione elettrodomestici rapida e garantita a domicilio in tutta Milano e provincia. Interventi su lavatrici, asciugatrici, lavastoviglie, frigoriferi, congelatori, piani cottura e forni.",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Milano",
@@ -107,7 +108,7 @@ const Index = () => {
               {
                 "@type": "Offer",
                 "itemOffered": {
-                  "@type": "Service", 
+                  "@type": "Service",
                   "name": "Riparazione Lavastoviglie",
                   "description": "Riparazione e manutenzione lavastoviglie"
                 }
@@ -115,9 +116,33 @@ const Index = () => {
               {
                 "@type": "Offer",
                 "itemOffered": {
-                  "@type": "Service",
+                  "@type": "Service", 
                   "name": "Riparazione Forni",
                   "description": "Riparazione forni elettrici e a gas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Riparazione Asciugatrici",
+                  "description": "Riparazione e manutenzione asciugatrici di tutte le marche"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Riparazione Piani Cottura",
+                  "description": "Riparazione e manutenzione piani cottura elettrici e a gas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Riparazione Congelatori",
+                  "description": "Riparazione e manutenzione congelatori di grandi e piccole dimensioni"
                 }
               }
             ]

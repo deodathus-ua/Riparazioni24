@@ -15,19 +15,6 @@ const PrivacyPolicy = () => {
                 <meta name="robots" content="index, follow"/>
             </Helmet>
 
-            {/* Breadcrumb Navigation */}
-            <nav className="bg-gray-50 py-4" aria-label="Breadcrumb">
-                <div className="container">
-                    <ol className="flex items-center space-x-2 text-sm">
-                        <li>
-                            <a href="/" className="text-blue-600 hover:text-blue-800">Home</a>
-                        </li>
-                        <li className="text-gray-500">/</li>
-                        <li className="text-gray-700">Privacy Policy</li>
-                    </ol>
-                </div>
-            </nav>
-
             {/* Privacy Policy Content */}
             <section className="py-16">
                 <div className="container">
@@ -149,7 +136,7 @@ const PrivacyPolicy = () => {
                                             circostanze
                                         </li>
                                         <li><strong>Portabilità:</strong> Ricevere i dati in formato strutturato</li>
-                                        <li><strong>Opposizione:</strong> Opporti al trattamento per motivi legittimi
+                                        <li><strong>Opposizione:</strong> Opporsi al trattamento per motivi legittimi
                                         </li>
                                         <li><strong>Revoca del consenso:</strong> Revocare il consenso in qualsiasi
                                             momento

@@ -15,19 +15,6 @@ const TerminiServizio = () => {
                 <meta name="robots" content="index, follow"/>
             </Helmet>
 
-            {/* Breadcrumb Navigation */}
-            <nav className="bg-gray-50 py-4" aria-label="Breadcrumb">
-                <div className="container">
-                    <ol className="flex items-center space-x-2 text-sm">
-                        <li>
-                            <a href="/" className="text-blue-600 hover:text-blue-800">Home</a>
-                        </li>
-                        <li className="text-gray-500">/</li>
-                        <li className="text-gray-700">Termini di Servizio</li>
-                    </ol>
-                </div>
-            </nav>
-
             {/* Terms of Service Content */}
             <section className="py-16">
                 <div className="container">
