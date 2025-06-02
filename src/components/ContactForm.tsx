@@ -19,53 +19,28 @@ const serviceOptions = [
 ];
 
 const brandOptions = [
-  {value: 'aeg', label: 'AEG'},
-  {value: 'ariston', label: 'Ariston'},
-  {value: 'bauknecht', label: 'Bauknecht'},
-  {value: 'beko', label: 'Beko'},
-  {value: 'bosch', label: 'Bosch'},
-  {value: 'brandt', label: 'Brandt'},
-  {value: 'candy', label: 'Candy'},
-  {value: 'cylinda', label: 'Cylinda'},
-  {value: 'electrolux', label: 'Electrolux'},
-  {value: 'fagor', label: 'Fagor'},
-  {value: 'gorenje', label: 'Gorenje'},
-  {value: 'haier', label: 'Haier'},
-  {value: 'hotpoint', label: 'Hotpoint'},
-  {value: 'hoover', label: 'Hoover'},
-  {value: 'ignis', label: 'Ignis'},
-  {value: 'indesit', label: 'Indesit'},
-  {value: 'kelvinator', label: 'Kelvinator'},
-  {value: 'kenwood', label: 'Kenwood'},
-  {value: 'lg', label: 'LG'},
-  {value: 'liebherr', label: 'Liebherr'},
-  {value: 'miele', label: 'Miele'},
-  {value: 'neff', label: 'Neff'},
-  {value: 'privileg', label: 'Privileg'},
-  {value: 'rex', label: 'Rex'},
   {value: 'samsung', label: 'Samsung'},
-  {value: 'scholtes', label: 'Scholtes'},
-  {value: 'siemens', label: 'Siemens'},
-  {value: 'smeg', label: 'Smeg'},
+  {value: 'grundig', label: 'Grundig'},
   {value: 'whirlpool', label: 'Whirlpool'},
-  {value: 'zanker', label: 'Zanker'},
+  {value: 'electrolux', label: 'Electrolux'},
+  {value: 'hisense', label: 'Hisense'},
+  {value: 'siemens', label: 'Siemens'},
+  {value: 'indesit', label: 'Indesit'},
+  {value: 'candy', label: 'Candy'},
+  {value: 'ariston', label: 'Ariston'},
+  {value: 'hoover', label: 'Hoover'},
+  {value: 'beko', label: 'Beko'},
   {value: 'zanussi', label: 'Zanussi'},
-  {value: 'zoppas', label: 'Zoppas'},
+  {value: 'aeg', label: 'AEG'},
+  {value: 'bauknecht', label: 'Bauknecht'},
+  {value: 'ignis', label: 'Ignis'},
+  {value: 'hotpoint', label: 'Hotpoint'},
+  {value: 'smeg', label: 'Smeg'},
+  {value: 'haier', label: 'Haier'},
+  {value: 'bosch', label: 'Bosch'},
+  {value: 'miele', label: 'Miele'},
+  {value: 'lg', label: 'LG'},
   {value: 'altro', label: 'Altra Marca'},
-];
-
-const locationOptions = [
-  { value: 'milano', label: 'Milano' },
-  { value: 'sesto-san-giovanni', label: 'Sesto San Giovanni' },
-  { value: 'cinisello-balsamo', label: 'Cinisello Balsamo' },
-  { value: 'rho', label: 'Rho' },
-  { value: 'rozzano', label: 'Rozzano' },
-  { value: 'cologno-monzese', label: 'Cologno Monzese' },
-  { value: 'corsico', label: 'Corsico' },
-  { value: 'novate-milanese', label: 'Novate Milanese' },
-  { value: 'segrate', label: 'Segrate' },
-  { value: 'buccinasco', label: 'Buccinasco' },
-  { value: 'altro', label: 'Altra Località' },
 ];
 
 interface ContactFormProps {
@@ -295,22 +270,16 @@ const ContactForm: React.FC<ContactFormProps> = ({
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="location">Località *</Label>
-              <Select
+              <Label htmlFor="location">Indirizzo o Città *</Label>
+              <Input
+                  id="location"
+                  name="location"
                   value={formData.location}
-                  onValueChange={(value) => handleSelectChange('location', value)}
-              >
-                <SelectTrigger className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]">
-                  <SelectValue placeholder="Seleziona la tua località" />
-                </SelectTrigger>
-                <SelectContent>
-                  {locationOptions.map(option => (
-                      <SelectItem key={option.value} value={option.value}>
-                        {option.label}
-                      </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+                  onChange={handleChange}
+                  placeholder="Inserisci il tuo indirizzo o città (es. Milano, Via Roma 123)"
+                  required
+                  className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
+              />
             </div>
 
             <div className="space-y-2">
