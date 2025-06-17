@@ -108,7 +108,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
     try {
       // Отправка данных на бэкенд
-      const response = await fetch('https://riparazioni24-backend-master-hyswa5.laravel.cloud//api/contact', {
+      const response = await fetch('https://riparazioni24-backend-master-hyswa5.laravel.cloud/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
