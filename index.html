@@ -8,7 +8,7 @@
   <meta name="author" content="Riparazioni 24" />
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="/src/main.tsx" as="script"/>
+    <link rel="preload" href="/src/main.tsx" as="script" crossorigin="anonymous"/>
     <link rel="preload" href="/images/heroblock.webp" as="image"/>
 
     <!-- DNS prefetching -->
@@ -51,8 +51,7 @@
 
 <body>
 <div id="root"></div>
-<!-- IMPORTANTE: NON RIMUOVERE QUESTO TAG SCRIPT O QUESTO COMMENTO! -->
-<script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+<!-- Удален проблемный GPT Engineer script -->
 <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
