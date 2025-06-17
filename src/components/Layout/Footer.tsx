@@ -251,7 +251,7 @@ const Footer = () => {
                       <div className="mt-4 pt-4 border-t border-gray-800/50 text-center">
                           <p className="text-gray-500 text-xs">
                               Powered by{' '}
-                              <a href="https://limecodesoftwares.com" target="_blank" rel="noreferrer"
+                              <a href="https://limecode.eu/" target="_blank" rel="noreferrer"
                                  className="text-green-400 hover:text-green-300 transition-colors duration-300 font-medium">
                                   Lime Code Softwares
                               </a>
