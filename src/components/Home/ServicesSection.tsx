@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import OptimizedImage from '@/components/ui/optimized-image';
 
 const services = [
   {
@@ -152,7 +153,7 @@ const ServicesSection = () => {
                     <div key={service.id}
                          className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group border border-gray-100">
                         <div className="h-48 overflow-hidden relative">
-                            <img
+                            <OptimizedImage
                                 src={service.image}
                                 alt={service.title}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

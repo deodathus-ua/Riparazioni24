@@ -35,8 +35,7 @@ const MainLayout = ({
                 <meta name="googlebot" content="index, follow"/>
                 <link rel="canonical" href={currentUrl}/>
 
-                {/* Preload critical resources */}
-                <link rel="preload" href="/images/heroblock.webp" as="image" type="image/webp"/>
+                {/* DNS prefetching */}
                 <link rel="dns-prefetch" href="//www.googletagmanager.com"/>
                 <link rel="preconnect" href="//www.googletagmanager.com"/>
 
@@ -67,31 +66,6 @@ const MainLayout = ({
                         {JSON.stringify(structuredData)}
                     </script>
                 )}
-
-                {/* Optimized Google Tag Manager - Load with defer */}
-                <script
-                    defer
-                    src="https://www.googletagmanager.com/gtag/js?id=G-ZMT720KM42"
-                />
-                <script
-                    defer
-                    dangerouslySetInnerHTML={{
-                        __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag() { dataLayer.push(arguments); }
-              gtag('js', new Date());
-              gtag('config', 'G-ZMT720KM42', {
-                page_title: '${title}',
-                page_location: '${currentUrl}',
-                send_page_view: false
-              });
-              // Send page view after load
-              window.addEventListener('load', () => {
-                gtag('event', 'page_view');
-              });
-            `
-                    }}
-                />
             </Helmet>
 
             <div className="flex flex-col min-h-screen">

@@ -24,6 +24,7 @@ export default defineConfig(({ mode }) => ({
     outDir: 'dist',
     assetsDir: 'assets',
     minify: 'terser',
+    cssMinify: 'esbuild',
     terserOptions: {
       compress: {
         drop_console: true,
@@ -88,9 +89,23 @@ export default defineConfig(({ mode }) => ({
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash][extname]',
+        assetFileNames: (assetInfo) => {
+          // Group images separately for better caching
+          if (assetInfo.name?.match(/\.(png|jpe?g|webp|svg|gif)$/)) {
+            return 'images/[name]-[hash][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
       },
     },
+    // Improved performance settings
+    reportCompressedSize: false,
+    sourcemap: false,
+    chunkSizeWarningLimit: 1000,
+    // Additional optimizations for faster loading
+    target: 'es2020',
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096, // Inline small assets as base64
   },
   optimizeDeps: {
     include: [
@@ -102,5 +117,16 @@ export default defineConfig(({ mode }) => ({
   preview: {
     port: 8080,
     host: true,
+    headers: {
+      // Add cache headers for images
+      'Cache-Control': 'public, max-age=31536000', // 1 year for images
+    },
   },
+  // Performance optimizations
+  esbuild: {
+    drop: mode === 'production' ? ['console', 'debugger'] : [],
+  },
+  // Static asset handling
+  publicDir: 'public',
+  assetsInclude: ['**/*.webp', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.svg'],
 }));
