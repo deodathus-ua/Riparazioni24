@@ -70,6 +70,7 @@ const ChiSiamo = () => {
                           loading="lazy"
                           width="600"
                           height="400"
+                          decoding="async"
                       />
                   </div>
                   <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
@@ -117,6 +118,7 @@ const ChiSiamo = () => {
                             loading="lazy"
                             width="192"
                             height="192"
+                            decoding="async"
                         />
                     </div>
                   </div>
@@ -138,6 +140,7 @@ const ChiSiamo = () => {
                             loading="lazy"
                             width="192"
                             height="192"
+                            decoding="async"
                         />
                     </div>
                   </div>
@@ -159,6 +162,7 @@ const ChiSiamo = () => {
                             loading="lazy"
                             width="192"
                             height="192"
+                            decoding="async"
                         />
                     </div>
                   </div>
@@ -282,6 +286,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
                 <div
@@ -293,6 +298,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
                 <div
@@ -304,6 +310,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
                 <div
@@ -315,6 +322,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
                 <div
@@ -326,6 +334,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
                 <div
@@ -337,6 +346,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
 
@@ -350,6 +360,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
                 <div
@@ -361,6 +372,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
                 <div
@@ -372,6 +384,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
                 <div
@@ -383,6 +396,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
                 <div
@@ -394,6 +408,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
                 <div
@@ -405,6 +420,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
 
@@ -418,6 +434,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
                 <div
@@ -429,6 +446,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
                 <div
@@ -440,6 +458,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
                 <div
@@ -451,6 +470,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
                 <div
@@ -462,6 +482,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
                 <div
@@ -473,6 +494,7 @@ const ChiSiamo = () => {
                       loading="lazy"
                       width="120"
                       height="48"
+                      decoding="async"
                   />
                 </div>
 
@@ -488,6 +510,7 @@ const ChiSiamo = () => {
                           loading="lazy"
                           width="120"
                           height="48"
+                          decoding="async"
                       />
                     </div>
                     <div
@@ -499,6 +522,7 @@ const ChiSiamo = () => {
                           loading="lazy"
                           width="120"
                           height="48"
+                          decoding="async"
                       />
                     </div>
                     <div
@@ -510,6 +534,7 @@ const ChiSiamo = () => {
                           loading="lazy"
                           width="120"
                           height="48"
+                          decoding="async"
                       />
                     </div>
                   </div>

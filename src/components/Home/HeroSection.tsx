@@ -8,14 +8,30 @@ const HeroSection = () => {
     <section className="relative py-16 md:py-24">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/images/heroblock.webp"
-          alt="Tecnico specializzato ripara elettrodomestico con strumenti professionali"
-          className="w-full h-full object-cover"
-          loading="eager"
-          width="1920"
-          height="1080"
-        />
+          <picture>
+              <source
+                  media="(max-width: 768px)"
+                  srcSet="/images/heroblock.webp"
+                  width="768"
+                  height="432"
+              />
+              <source
+                  media="(max-width: 1024px)"
+                  srcSet="/images/heroblock.webp"
+                  width="1024"
+                  height="576"
+              />
+              <img
+                  src="/images/heroblock.webp"
+                  alt="Tecnico specializzato ripara elettrodomestico con strumenti professionali"
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                  width="1920"
+                  height="1080"
+                  fetchPriority="high"
+                  decoding="async"
+              />
+          </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a9a]/40 to-[#1e40af]/35"></div>
       </div>
       

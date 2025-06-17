@@ -103,9 +103,6 @@ const ServicesSection = () => {
             Offriamo servizi professionali di riparazione per tutti i tipi di grandi elettrodomestici a Milano e provincia.
             I nostri tecnici qualificati intervengono rapidamente a domicilio per risolvere ogni problema.
           </p>
-          <p className="text-md text-gray-800 mt-4 font-medium px-4 py-2 bg-[#10b981]/10 inline-block rounded-full">
-              Costo dell'uscita: €30 anche senza riparazione
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -116,6 +113,11 @@ const ServicesSection = () => {
                   src={service.image} 
                   alt={service.title} 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="300"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
               <div className="p-6">
