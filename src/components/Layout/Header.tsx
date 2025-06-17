@@ -176,10 +176,11 @@ const Header = () => {
 
               {/* Enhanced Mobile Menu Button */}
               <button
-                  className="md:hidden bg-gray-100 p-2 rounded-lg hover:bg-gray-200 transition-colors"
+                  className="md:hidden bg-gray-100 p-2 rounded-lg hover:bg-gray-200 transition-colors flex items-center space-x-2"
                   onClick={toggleMenu}
               >
-                  {isMenuOpen ? <X size={24} className="text-gray-700"/> : <Menu size={24} className="text-gray-700"/>}
+                  {isMenuOpen ? <X size={20} className="text-gray-700"/> : <Menu size={20} className="text-gray-700"/>}
+                  <span className="text-gray-700 font-medium text-sm">Menu</span>
               </button>
           </div>
 
