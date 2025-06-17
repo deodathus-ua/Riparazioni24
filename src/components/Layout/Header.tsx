@@ -64,7 +64,7 @@ const Header = () => {
                   <div className="ml-3">
                       <div className="flex items-baseline">
                     <span
-                        className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                        className="text-2xl font-bold text-blue-600">
                       Riparazioni 24
                     </span>
                           <span className="text-green-500 font-semibold text-lg ml-2 hidden sm:inline">Milano</span>
