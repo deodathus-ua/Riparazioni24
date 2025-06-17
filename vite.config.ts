@@ -23,6 +23,22 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+    // Ensure single React instance
+    dedupe: ['react', 'react-dom'],
+  },
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      '@radix-ui/react-toast',
+      '@radix-ui/react-tooltip',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-popover',
+      '@radix-ui/react-select',
+      '@radix-ui/react-label',
+      '@radix-ui/react-slot'
+    ],
   },
   build: {
     outDir: 'dist',
@@ -44,11 +60,20 @@ export default defineConfig(({ mode }) => ({
         manualChunks(id) {
           try {
             if (id.includes('node_modules')) {
+              // Keep React and React-DOM together in main vendor chunk
               if (id.includes('react') || id.includes('react-dom')) {
                 return 'react-vendor';
               }
+              // Separate Radix UI components
+              if (id.includes('@radix-ui')) {
+                return 'radix-vendor';
+              }
               if (id.includes('lucide-react')) {
                 return 'icons-vendor';
+              }
+              // Other node_modules
+              if (id.includes('@tanstack') || id.includes('react-router') || id.includes('react-helmet')) {
+                return 'libs-vendor';
               }
               return 'vendor';
             }
