@@ -34,14 +34,6 @@ const CookieBanner = () => {
 
     return (
         <>
-            {/* Backdrop с плавным появлением */}
-            <div
-                className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 animate-fade-in"
-                style={{
-                    animation: 'fadeIn 0.3s ease-out'
-                }}
-            ></div>
-
             {/* Modal с современным дизайном */}
             <div
                 className="fixed bottom-6 left-1/2 transform -translate-x-1/2 w-full max-w-md mx-4 z-50"
@@ -50,7 +42,7 @@ const CookieBanner = () => {
                 }}
             >
                 <div
-                    className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 overflow-hidden">
+                    className="bg-white/95 rounded-2xl shadow-2xl border border-white/20 overflow-hidden">
                     {/* Gradient background */}
                     <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-blue-50/30"></div>
 
@@ -134,15 +126,6 @@ const CookieBanner = () => {
             </div>
 
             <style>{`
-                @keyframes fadeIn {
-                    from {
-                        opacity: 0;
-                    }
-                    to {
-                        opacity: 1;
-                    }
-                }
-
                 @keyframes slideUp {
                     from {
                         opacity: 0;

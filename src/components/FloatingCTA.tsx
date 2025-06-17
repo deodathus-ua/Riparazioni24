@@ -41,8 +41,8 @@ const FloatingCTA = () => {
 
   // Adjust styling based on device
   const positionClass = isMobile
-      ? "fixed bottom-20 left-4 right-4 z-50"
-      : "fixed bottom-6 right-6 z-50";
+      ? "fixed bottom-32 left-8 right-4 z-50"
+      : "fixed bottom-24 right-6 z-50";
 
   return (
       <div
@@ -125,7 +125,7 @@ const FloatingCTA = () => {
                       <div className="mt-3 flex items-center justify-center gap-4 text-xs text-gray-500">
                           <div className="flex items-center gap-1">
                               <span className="text-yellow-500">★★★★★</span>
-                              <span>5.0</span>
+                              <span>4.6</span>
                           </div>
                           <div className="w-px h-3 bg-gray-300"></div>
                           <span>Tecnici qualificati</span>

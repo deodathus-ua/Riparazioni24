@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import {ArrowRight} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import OptimizedImage from '@/components/ui/optimized-image';
 
@@ -9,12 +9,6 @@ const services = [
     id: 'lavatrice',
     title: 'Riparazione Lavatrici',
     description: 'Ripariamo ogni tipologia di lavatrice con problemi di carico, scarico, centrifuga o pannello comandi.',
-    icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-blue-600" fill="none" viewBox="0 0 24 24"
-             stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 3h8m-8 3h8m-4 5a2 2 0 100-4 2 2 0 000 4z" />
-      </svg>
-    ),
     image: '/images/lavatrice.webp',
       ctaText: 'Ripara la tua lavatrice oggi!',
       color: 'blue'
@@ -23,13 +17,6 @@ const services = [
       id: 'asciugatrice',
       title: 'Riparazione Asciugatrici',
       description: 'Risolviamo problemi alle asciugatrici come mancato riscaldamento, rumori anomali o errori del sistema.',
-      icon: (
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24"
-               stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                    d="M5 3v18h14V3H5zm3 3h8m-8 3h8m-4 7a4 4 0 100-8 4 4 0 000 8z"/>
-          </svg>
-      ),
       image: '/images/asciugatrice.webp',
       ctaText: 'Asciugatrice guasta? Risolviamo subito!',
       color: 'green'
@@ -38,26 +25,14 @@ const services = [
     id: 'lavastoviglie',
     title: 'Riparazione Lavastoviglie',
     description: 'Risolviamo guasti come scarso lavaggio, perdite d\'acqua o problemi elettronici dei principali marchi.',
-    icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-purple-600" fill="none" viewBox="0 0 24 24"
-             stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm0 4h14M8 10v7m8-7v7" />
-      </svg>
-    ),
     image: '/images/lavastoviglie.webp',
-        ctaText: 'Lavastoviglie che non lava? Chiama ora!',
-        color: 'purple'
+      ctaText: 'Lavastoviglie che non lava? Chiama ora!',
+      color: 'purple'
   },
   {
     id: 'frigorifero',
     title: 'Riparazione Frigoriferi',
     description: 'Interveniamo su problemi di temperatura, perdite di gas refrigerante o guasti al compressore.',
-    icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-orange-600" fill="none" viewBox="0 0 24 24"
-             stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm0 9h14M9 3v9m0 3v6" />
-      </svg>
-    ),
     image: '/images/frigo.webp',
       ctaText: 'Frigorifero che non raffredda? Contattaci!',
       color: 'orange'
@@ -66,12 +41,6 @@ const services = [
       id: 'congelatore',
       title: 'Riparazione Congelatori',
       description: 'Ripariamo congelatori verticali e orizzontali con problemi di raffreddamento o malfunzionamenti.',
-    icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-cyan-600" fill="none" viewBox="0 0 24 24"
-             stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm0 6h14m0 6H5M9 3v18"/>
-      </svg>
-    ),
       image: '/images/frigo_2.webp',
       ctaText: 'Congelatore che non congela? Chiamaci!',
       color: 'cyan'
@@ -80,12 +49,6 @@ const services = [
     id: 'piano-cottura',
     title: 'Riparazione Piani Cottura',
       description: 'Ripariamo piani cottura a gas, elettrici e a induzione con problemi di accensione o circuiti.',
-    icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-red-600" fill="none" viewBox="0 0 24 24"
-             stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm2 4h10M7 10h2m6 0h2m-5 4a2 2 0 100-4 2 2 0 000 4z" />
-        </svg>
-    ),
     image: '/images/pianocottura.webp',
       ctaText: 'Piano cottura non funziona? Contattaci!',
       color: 'red'
@@ -94,12 +57,6 @@ const services = [
         id: 'forno',
         title: 'Riparazione Forni',
         description: 'Ripariamo forni elettrici e a gas con problemi di temperatura, resistenze o centraline elettroniche.',
-        icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-amber-600" fill="none" viewBox="0 0 24 24"
-                 stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v18h14V3H5zm3 14h8M8 10h8"/>
-            </svg>
-        ),
         image: '/images/forno.webp',
         ctaText: 'Problemi con il forno? Riparazione veloce!',
         color: 'amber'
@@ -108,13 +65,62 @@ const services = [
 
 const getColorClasses = (color: string) => {
     const colorMap = {
-        blue: {bg: 'bg-blue-100', text: 'text-blue-600', hover: 'hover:bg-blue-600 hover:text-white'},
-        green: {bg: 'bg-green-100', text: 'text-green-600', hover: 'hover:bg-green-600 hover:text-white'},
-        purple: {bg: 'bg-purple-100', text: 'text-purple-600', hover: 'hover:bg-purple-600 hover:text-white'},
-        orange: {bg: 'bg-orange-100', text: 'text-orange-600', hover: 'hover:bg-orange-600 hover:text-white'},
-        cyan: {bg: 'bg-cyan-100', text: 'text-cyan-600', hover: 'hover:bg-cyan-600 hover:text-white'},
-        red: {bg: 'bg-red-100', text: 'text-red-600', hover: 'hover:bg-red-600 hover:text-white'},
-        amber: {bg: 'bg-amber-100', text: 'text-amber-600', hover: 'hover:bg-amber-600 hover:text-white'}
+        blue: {
+            bg: 'bg-blue-100',
+            text: 'text-blue-600',
+            hover: 'hover:bg-blue-600 hover:text-white',
+            border: 'border-blue-500',
+            accent: 'bg-blue-500',
+            button: 'bg-blue-600 hover:bg-blue-700'
+        },
+        green: {
+            bg: 'bg-green-100',
+            text: 'text-green-600',
+            hover: 'hover:bg-green-600 hover:text-white',
+            border: 'border-green-500',
+            accent: 'bg-green-500',
+            button: 'bg-green-600 hover:bg-green-700'
+        },
+        purple: {
+            bg: 'bg-purple-100',
+            text: 'text-purple-600',
+            hover: 'hover:bg-purple-600 hover:text-white',
+            border: 'border-purple-500',
+            accent: 'bg-purple-500',
+            button: 'bg-purple-600 hover:bg-purple-700'
+        },
+        orange: {
+            bg: 'bg-orange-100',
+            text: 'text-orange-600',
+            hover: 'hover:bg-orange-600 hover:text-white',
+            border: 'border-orange-500',
+            accent: 'bg-orange-500',
+            button: 'bg-orange-600 hover:bg-orange-700'
+        },
+        cyan: {
+            bg: 'bg-cyan-100',
+            text: 'text-cyan-600',
+            hover: 'hover:bg-cyan-600 hover:text-white',
+            border: 'border-cyan-500',
+            accent: 'bg-cyan-500',
+            button: 'bg-cyan-600 hover:bg-cyan-700'
+        },
+        red: {
+            bg: 'bg-red-100',
+            text: 'text-red-600',
+            hover: 'hover:bg-red-600 hover:text-white',
+            border: 'border-red-500',
+            accent: 'bg-red-500',
+            button: 'bg-red-600 hover:bg-red-700'
+        },
+        amber: {
+            bg: 'bg-amber-100',
+            text: 'text-amber-600',
+            hover: 'hover:bg-amber-600 hover:text-white',
+            border: 'border-amber-500',
+            accent: 'bg-amber-500',
+            button: 'bg-amber-600 hover:bg-amber-700'
+        }
     };
     return colorMap[color as keyof typeof colorMap] || colorMap.blue;
 };
@@ -151,7 +157,7 @@ const ServicesSection = () => {
                 const colors = getColorClasses(service.color);
                 return (
                     <div key={service.id}
-                         className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group border border-gray-100">
+                         className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group border border-gray-100 relative flex flex-col">
                         <div className="h-48 overflow-hidden relative">
                             <OptimizedImage
                                 src={service.image}
@@ -162,41 +168,61 @@ const ServicesSection = () => {
                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             />
                             <div
-                                className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <div className="p-8">
+                                className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <div
-                                className={`mb-6 p-3 rounded-xl w-fit ${colors.bg} ${colors.text} group-hover:scale-110 transition-transform duration-300`}>
-                                {service.icon}
-                  </div>
-                    <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">{service.title}</h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-
-                    <div className="space-y-4">
-                        <div className={`p-3 rounded-lg ${colors.bg} ${colors.text} font-medium text-sm`}>
-                            {service.ctaText}
+                                className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold ${colors.bg} ${colors.text}`}>
+                                Servizio Professionale
+                            </div>
+                            <div className={`absolute bottom-0 left-0 right-0 h-1 ${colors.accent}`}></div>
                         </div>
-                        <div className="flex justify-between items-center pt-2">
-                            <Link
-                                to={`/servizi/${service.id}`}
-                                className="inline-flex items-center text-gray-600 hover:text-blue-600 font-medium transition-colors group/link"
-                            >
-                                Scopri di più
-                                <ArrowRight size={16} className="ml-1 group-hover/link:ml-2 transition-all"/>
-                            </Link>
+                        <div className="p-8 flex-1 flex flex-col">
+                            <div className="flex-1">
+                                <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors leading-tight">{service.title}</h3>
+                                <p className="text-gray-600 mb-6 leading-relaxed text-base">{service.description}</p>
 
-                            <Link to="/contatti" className="inline-block">
-                                <Button
-                                    className="bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm py-2 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
-                                    Richiedi Intervento
-                                </Button>
-                            </Link>
+                                <div className="space-y-4">
+                                    <div
+                                        className={`p-4 rounded-xl ${colors.bg} border-l-4 ${colors.border}`}>
+                                        <p className={`${colors.text} font-semibold text-sm flex items-center`}>
+                                            <span className="w-2 h-2 bg-current rounded-full mr-3"></span>
+                                            {service.ctaText}
+                                        </p>
+                                    </div>
+
+                                    <div className="bg-gray-50 p-4 rounded-xl">
+                                        <div className="flex items-center justify-between mb-3">
+                                            <span className="text-sm font-medium text-gray-500">Disponibilità</span>
+                                            <span className="text-green-600 text-sm font-semibold">24/7</span>
+                                        </div>
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-sm font-medium text-gray-500">Intervento</span>
+                                            <span className="text-blue-600 text-sm font-semibold">Entro 24h</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="flex justify-between items-center pt-6 mt-auto">
+                                <Link
+                                    to={`/servizi/${service.id}`}
+                                    className="inline-flex items-center text-gray-600 hover:text-blue-600 font-medium transition-colors group/link text-sm"
+                                >
+                                    Scopri di più
+                                    <ArrowRight size={16}
+                                                className="ml-1 group-hover/link:ml-2 transition-all"/>
+                                </Link>
+
+                                <Link to="/contatti" className="inline-block">
+                                    <Button
+                                        className={`${colors.button} text-white font-medium text-sm py-2 px-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg`}>
+                                        Richiedi Intervento
+                                    </Button>
+                                </Link>
+                            </div>
                         </div>
                     </div>
-                </div>
-              </div>
-            );
-          })}
+                );
+            })}
         </div>
 
           <div className="mt-16 text-center">

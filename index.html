@@ -39,9 +39,7 @@
       line-height: 1.6;
     }
 
-    .font-loaded {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    }
+
 
     /* Initial page styling */
     #root {
@@ -98,18 +96,15 @@
       }
     }
 
-    .loading.fade-out {
-      opacity: 0;
-      pointer-events: none;
-    }
+
   </style>
 
   <!-- DNS prefetching -->
   <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
   <link rel="dns-prefetch" href="//www.googletagmanager.com"/>
 
-  <!-- Google tag (gtag.js) - defer loading -->
-  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-ZMT720KM42"></script>
+  <!-- Google tag (gtag.js) - with error handling -->
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-ZMT720KM42" onerror="console.warn('Google Analytics failed to load')"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -119,10 +114,17 @@
 
     gtag('js', new Date());
 
-    // Проверяем согласие на cookies перед инициализацией Google Analytics
-    const cookieConsent = localStorage.getItem('cookie_consent');
-    if (cookieConsent === 'accepted') {
-      gtag('config', 'G-ZMT720KM42');
+    // Add error handling for GA initialization
+    try {
+      const cookieConsent = localStorage.getItem('cookie_consent');
+      if (cookieConsent === 'accepted') {
+        gtag('config', 'G-ZMT720KM42', {
+          'custom_map': {},
+          'send_page_view': true
+        });
+      }
+    } catch (error) {
+      console.warn('Google Analytics initialization failed:', error);
     }
   </script>
 
