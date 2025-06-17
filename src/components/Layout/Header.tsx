@@ -60,11 +60,12 @@ const Header = () => {
                             className="h-10 w-auto object-contain"
                             width="120"
                             height="40"
+                            loading="eager"
+                            fetchpriority="high"
                         />
                   <div className="ml-3">
                       <div className="flex items-baseline">
-                    <span
-                        className="text-2xl font-bold text-blue-600">
+                    <span className="lcp-text">
                       Riparazioni 24
                     </span>
                           <span className="text-green-500 font-semibold text-lg ml-2 hidden sm:inline">Milano</span>

@@ -25,6 +25,7 @@
   <link rel="preload" href="/images/lavatrice.webp" as="image" type="image/webp">
   <link rel="preload" href="/images/tecnico.webp" as="image" type="image/webp">
   <link rel="preload" href="/logo.webp" as="image" type="image/webp">
+  <link rel="preload" href="/logo.png" as="image" type="image/png" fetchpriority="high">
 
   <!-- Critical CSS inline -->
   <style>
@@ -96,7 +97,48 @@
       }
     }
 
+    /* CRITICAL CSS FOR HEADER LCP OPTIMIZATION */
+    header {
+        background-color: #ffffff;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        border-bottom: 1px solid #f3f4f6;
+    }
 
+    /* Critical styles for LCP element */
+    .lcp-text {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #2563eb;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.2;
+        display: block;
+        will-change: auto;
+    }
+
+    /* Container optimization */
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .logo-container img {
+        height: 2.5rem;
+        width: auto;
+        object-fit: contain;
+    }
   </style>
 
   <!-- DNS prefetching -->
