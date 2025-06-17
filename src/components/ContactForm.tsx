@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
 import {CookieManager} from '@/lib/cookies';
+import {CheckCircle, Clock, Star} from 'lucide-react';
 
 const serviceOptions = [
   { value: 'lavatrice', label: 'Lavatrice' },
@@ -183,148 +184,198 @@ const ContactForm: React.FC<ContactFormProps> = ({
   }, [formData]);
 
   return (
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <div className="text-center mb-6">
-          <h2 className="text-2xl font-bold text-[#1e3a8a]">{title}</h2>
-          <p className="text-gray-600 mt-2">{description}</p>
-        </div>
+      <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 relative overflow-hidden">
+        {/* Decorative element */}
+        <div
+            className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-500 to-green-500 rounded-full opacity-10 transform translate-x-8 -translate-y-8"></div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 gap-5">
-            <div className="space-y-2">
-              <Label htmlFor="fullName">Nome e Cognome *</Label>
-              <Input
-                  id="fullName"
-                  name="fullName"
-                  value={formData.fullName}
-                  onChange={handleChange}
-                  placeholder="Inserisci il tuo nome completo"
-                  required
-                  className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
-              />
+        <div className="relative z-10">
+          <div className="text-center mb-8">
+            <div
+                className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-4">
+              <Star size={16} className="mr-2"/>
+              Preventivo gratuito
             </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="phone">Numero di Telefono *</Label>
-              <Input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="Inserisci il tuo numero di telefono"
-                  required
-                  className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Inserisci la tua email (facoltativo)"
-                  className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="applianceType">Tipo di Elettrodomestico *</Label>
-              <Select
-                  value={formData.applianceType}
-                  onValueChange={(value) => handleSelectChange('applianceType', value)}
-              >
-                <SelectTrigger className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]">
-                  <SelectValue placeholder="Seleziona l'elettrodomestico" />
-                </SelectTrigger>
-                <SelectContent>
-                  {serviceOptions.map(option => (
-                      <SelectItem key={option.value} value={option.value}>
-                        {option.label}
-                      </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="brand">Marca *</Label>
-              <Select
-                  value={formData.brand}
-                  onValueChange={(value) => handleSelectChange('brand', value)}
-              >
-                <SelectTrigger className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]">
-                  <SelectValue placeholder="Seleziona la marca"/>
-                </SelectTrigger>
-                <SelectContent>
-                  {brandOptions.map(option => (
-                      <SelectItem key={option.value} value={option.value}>
-                        {option.label}
-                      </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="location">Indirizzo o Città *</Label>
-              <Input
-                  id="location"
-                  name="location"
-                  value={formData.location}
-                  onChange={handleChange}
-                  placeholder="Inserisci il tuo indirizzo o città (es. Milano, Via Roma 123)"
-                  required
-                  className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="problem">Descrizione del Problema *</Label>
-              <Textarea
-                  id="problem"
-                  name="problem"
-                  value={formData.problem}
-                  onChange={handleChange}
-                  placeholder="Descrivi brevemente il problema che riscontri con il tuo elettrodomestico"
-                  rows={4}
-                  required
-                  className="bg-gray-50 focus:bg-white focus:border-[#1e3a8a]"
-              />
-            </div>
-
-            <div className="flex items-start space-x-2">
-              <input
-                  type="checkbox"
-                  id="privacyAccepted"
-                  name="privacyAccepted"
-                  checked={formData.privacyAccepted}
-                  onChange={handleChange}
-                  className="mt-1"
-              />
-              <label htmlFor="privacyAccepted" className="text-sm text-gray-600">
-                Ho letto e accetto la <a href="#/privacy-policy"
-                                         className="text-[#1e3a8a] hover:text-[#10b981] underline" target="_blank"
-                                         rel="noopener noreferrer">Privacy Policy</a> *
-              </label>
-            </div>
-
-            <Button
-                type="submit"
-                className="bg-[#10b981] hover:bg-[#059669] text-white font-semibold py-3 px-6 w-full"
-                disabled={isSubmitting}
-            >
-              {isSubmitting ? 'Invio in corso...' : 'Richiedi Preventivo Gratuito'}
-            </Button>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">{title}</h2>
+            <p className="text-gray-600 leading-relaxed">{description}</p>
           </div>
-        </form>
 
-        <div className="mt-6 text-center text-sm text-gray-500">
-          <p>* Campi obbligatori</p>
-          <p className="mt-2">Risposta garantita entro 60 minuti negli orari di lavoro</p>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-1 gap-6">
+              <div className="space-y-3">
+                <Label htmlFor="fullName" className="text-sm font-semibold text-gray-900">Nome e Cognome *</Label>
+                <Input
+                    id="fullName"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    placeholder="Inserisci il tuo nome completo"
+                    required
+                    className="bg-gray-50 border-gray-200 focus:bg-white focus:border-blue-500 focus:ring-blue-500 rounded-lg px-4 py-3 transition-all duration-200"
+                />
+              </div>
+
+              <div className="space-y-3">
+                <Label htmlFor="phone" className="text-sm font-semibold text-gray-900">Numero di Telefono *</Label>
+                <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="Inserisci il tuo numero di telefono"
+                    required
+                    className="bg-gray-50 border-gray-200 focus:bg-white focus:border-blue-500 focus:ring-blue-500 rounded-lg px-4 py-3 transition-all duration-200"
+                />
+              </div>
+
+              <div className="space-y-3">
+                <Label htmlFor="email" className="text-sm font-semibold text-gray-900">Email</Label>
+                <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Inserisci la tua email (facoltativo)"
+                    className="bg-gray-50 border-gray-200 focus:bg-white focus:border-blue-500 focus:ring-blue-500 rounded-lg px-4 py-3 transition-all duration-200"
+                />
+              </div>
+
+              <div className="space-y-3">
+                <Label htmlFor="applianceType" className="text-sm font-semibold text-gray-900">Tipo di Elettrodomestico
+                  *</Label>
+                <Select
+                    value={formData.applianceType}
+                    onValueChange={(value) => handleSelectChange('applianceType', value)}
+                >
+                  <SelectTrigger
+                      className="bg-gray-50 border-gray-200 focus:bg-white focus:border-blue-500 focus:ring-blue-500 rounded-lg px-4 py-3 h-12 transition-all duration-200">
+                    <SelectValue placeholder="Seleziona l'elettrodomestico"/>
+                  </SelectTrigger>
+                  <SelectContent>
+                    {serviceOptions.map(option => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div className="space-y-3">
+                <Label htmlFor="brand" className="text-sm font-semibold text-gray-900">Marca *</Label>
+                <Select
+                    value={formData.brand}
+                    onValueChange={(value) => handleSelectChange('brand', value)}
+                >
+                  <SelectTrigger
+                      className="bg-gray-50 border-gray-200 focus:bg-white focus:border-blue-500 focus:ring-blue-500 rounded-lg px-4 py-3 h-12 transition-all duration-200">
+                    <SelectValue placeholder="Seleziona la marca"/>
+                  </SelectTrigger>
+                  <SelectContent>
+                    {brandOptions.map(option => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div className="space-y-3">
+                <Label htmlFor="location" className="text-sm font-semibold text-gray-900">Indirizzo o Città *</Label>
+                <Input
+                    id="location"
+                    name="location"
+                    value={formData.location}
+                    onChange={handleChange}
+                    placeholder="Inserisci il tuo indirizzo o città (es. Milano, Via Roma 123)"
+                    required
+                    className="bg-gray-50 border-gray-200 focus:bg-white focus:border-blue-500 focus:ring-blue-500 rounded-lg px-4 py-3 transition-all duration-200"
+                />
+              </div>
+
+              <div className="space-y-3">
+                <Label htmlFor="problem" className="text-sm font-semibold text-gray-900">Descrizione del Problema
+                  *</Label>
+                <Textarea
+                    id="problem"
+                    name="problem"
+                    value={formData.problem}
+                    onChange={handleChange}
+                    placeholder="Descrivi brevemente il problema che riscontri con il tuo elettrodomestico"
+                    rows={4}
+                    required
+                    className="bg-gray-50 border-gray-200 focus:bg-white focus:border-blue-500 focus:ring-blue-500 rounded-lg px-4 py-3 transition-all duration-200 resize-none"
+                />
+              </div>
+
+              <div className="flex items-start space-x-3 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <input
+                    type="checkbox"
+                    id="privacyAccepted"
+                    name="privacyAccepted"
+                    checked={formData.privacyAccepted}
+                    onChange={handleChange}
+                    className="mt-1 w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                />
+                <label htmlFor="privacyAccepted" className="text-sm text-gray-700 leading-relaxed">
+                  Ho letto e accetto la <a href="#/privacy-policy"
+                                           className="text-blue-600 hover:text-blue-700 underline font-medium"
+                                           target="_blank"
+                                           rel="noopener noreferrer">Privacy Policy</a> *
+                </label>
+              </div>
+
+              <Button
+                  type="submit"
+                  className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold py-4 px-8 w-full rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.01] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                    <div className="flex items-center justify-center">
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Invio in corso...
+                    </div>
+                ) : (
+                    <div className="flex items-center justify-center">
+                      <CheckCircle size={20} className="mr-2"/>
+                      Richiedi Preventivo Gratuito
+                    </div>
+                )}
+              </Button>
+            </div>
+          </form>
+
+          {/* Enhanced footer */}
+          <div className="mt-8 text-center">
+            <div className="flex items-center justify-center mb-4">
+              <div className="flex items-center text-sm text-gray-600 bg-gray-50 px-4 py-2 rounded-lg">
+                <Clock size={16} className="mr-2 text-green-600"/>
+                <span className="font-medium">Risposta garantita entro 60 minuti</span>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+              <div className="flex items-center justify-center">
+                <CheckCircle size={16} className="text-green-500 mr-2 flex-shrink-0"/>
+                <span className="text-sm text-gray-600">Preventivo gratuito</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <CheckCircle size={16} className="text-green-500 mr-2 flex-shrink-0"/>
+                <span className="text-sm text-gray-600">Intervento entro 24h</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <CheckCircle size={16} className="text-green-500 mr-2 flex-shrink-0"/>
+                <span className="text-sm text-gray-600">Garanzia 12 mesi</span>
+              </div>
+            </div>
+
+            <p className="text-xs text-gray-500 mt-4">
+              * Campi obbligatori - I tuoi dati sono protetti e non verranno condivisi con terzi
+            </p>
+          </div>
         </div>
       </div>
   );
