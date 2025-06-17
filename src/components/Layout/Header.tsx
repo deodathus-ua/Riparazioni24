@@ -61,7 +61,7 @@ const Header = () => {
                             width="120"
                             height="40"
                             loading="eager"
-                            fetchpriority="high"
+                            fetchPriority="high"
                         />
                   <div className="ml-3">
                       <div className="flex items-baseline">
