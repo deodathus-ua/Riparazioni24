@@ -55,31 +55,33 @@ export default defineConfig(({ mode }) => ({
     // Reduce chunk size limit warnings
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
+      external: (id) => {
+        // Don't externalize anything - we want everything bundled
+        return false;
+      },
       output: {
         // Split vendor chunks for better caching
         manualChunks(id) {
           try {
             if (id.includes('node_modules')) {
-              // Keep React and React-DOM together in main vendor chunk
-              if (id.includes('react') || id.includes('react-dom')) {
+              // Keep ALL React-related libraries together
+              if (id.includes('react') ||
+                  id.includes('react-dom') ||
+                  id.includes('@radix-ui') ||
+                  id.includes('react-router') ||
+                  id.includes('react-helmet') ||
+                  id.includes('@tanstack/react-query')) {
                 return 'react-vendor';
-              }
-              // Separate Radix UI components
-              if (id.includes('@radix-ui')) {
-                return 'radix-vendor';
               }
               if (id.includes('lucide-react')) {
                 return 'icons-vendor';
               }
-              // Other node_modules
-              if (id.includes('@tanstack') || id.includes('react-router') || id.includes('react-helmet')) {
-                return 'libs-vendor';
-              }
-              return 'vendor';
+              // Everything else
+              return 'other-vendor';
             }
           } catch (error) {
             console.warn('Error in manualChunks:', error);
-            return 'vendor';
+            return 'react-vendor';
           }
         },
         // Add hash to filenames for better caching
