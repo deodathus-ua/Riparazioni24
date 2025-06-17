@@ -15,9 +15,10 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
-  ].filter(Boolean),
+    ...(mode === 'development' 
+      ? [componentTagger()]
+      : []),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -33,6 +34,7 @@ export default defineConfig(({ mode }) => ({
         drop_console: true,
         drop_debugger: true,
       },
+      mangle: true,
     },
     // Reduce chunk size limit warnings
     chunkSizeWarningLimit: 1000,
@@ -40,13 +42,18 @@ export default defineConfig(({ mode }) => ({
       output: {
         // Split vendor chunks for better caching
         manualChunks(id) {
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'react-vendor';
+          try {
+            if (id.includes('node_modules')) {
+              if (id.includes('react') || id.includes('react-dom')) {
+                return 'react-vendor';
+              }
+              if (id.includes('lucide-react')) {
+                return 'icons-vendor';
+              }
+              return 'vendor';
             }
-            if (id.includes('lucide-react')) {
-              return 'icons-vendor';
-            }
+          } catch (error) {
+            console.warn('Error in manualChunks:', error);
             return 'vendor';
           }
         },
